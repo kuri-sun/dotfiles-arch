@@ -1,3 +1,5 @@
+![yoda_desktop preview](assets/desktop.png)
+
 ![yoda_hyprland preview](assets/with_wofi.png)
 
 # Hyprland - Yoda theme
