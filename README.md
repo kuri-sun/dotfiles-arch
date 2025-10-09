@@ -1,8 +1,10 @@
+# Hyprland - Yoda theme
+
 ![yoda_desktop preview](assets/desktop.png)
 
 ![yoda_hyprland preview](assets/with_wofi.png)
 
-# Hyprland - Yoda theme
+## Info
 
 - **Operating System:** Arch Linux
 - **Window Manager:** Hyprland
@@ -67,7 +69,7 @@ bash ~/.config/scripts/install-master.sh
 
 </details>
 
-## Package Lists
+## Packages
 
 - `pkglist.txt` - Official Arch packages
 - `aurlist.txt` - AUR packages
