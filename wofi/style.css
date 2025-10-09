@@ -1,0 +1,88 @@
+/* --- Global --- */
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+/* --- Window --- */
+#window {
+  background-color: rgba(5, 7, 5, 0.95); /* Alacritty background */
+  color: #b9f6ca; /* Alacritty foreground */
+  border: 2px solid rgba(0, 255, 153, 0.6); /* Jedi green glow */
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.15); /* subtle lightsaber glow */
+}
+
+/* --- Outer box --- */
+#outer-box {
+  padding: 16px;
+}
+
+/* --- Input box --- */
+#input {
+  background-color: rgba(0, 255, 153, 0.08); /* subtle glow */
+  color: #b9f6ca;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* --- Selected input text --- */
+#input:selected,
+#entry:selected {
+  background-color: rgba(0, 255, 153, 0.25);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.2);
+}
+
+/* --- Scroll area --- */
+#scroll {
+  margin-top: 16px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* --- Inner box --- */
+#inner-box {
+  padding: 4px 0;
+}
+
+/* --- Image/icon --- */
+#img {
+  padding-right: 24px;
+}
+
+/* --- Text items --- */
+#text {
+  color: #b9f6ca;
+  font-weight: 500;
+}
+
+#text:selected {
+  color: #fff;
+}
+
+/* --- Entries --- */
+#entry {
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+#entry:selected {
+  background-color: rgba(0, 255, 153, 0.2);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.18);
+}
+
+/* --- Unselected / Selected wrappers --- */
+#unselected {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+#selected {
+  border-radius: 5px;
+}

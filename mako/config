@@ -1,0 +1,15 @@
+font=JetBrains Mono 12
+background-color=#050705ee       # Alacritty background with transparency
+text-color=#b9f6ca               # Alacritty foreground
+border-color=#00ff99             # Jedi green lightsaber
+border-size=2
+border-radius=8
+padding=8
+margin=10
+width=320
+height=100
+default-timeout=5000
+icons=1
+anchor=top-right
+max-visible=3
+group-by=app-name

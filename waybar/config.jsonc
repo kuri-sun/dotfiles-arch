@@ -1,0 +1,49 @@
+// -*- mode: jsonc -*-
+{
+  "height": 44,
+  "spacing": 8,
+  "modules-left": ["custom/arch", "cpu", "memory", "temperature", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "battery"],
+  "custom/arch": { 
+    "format": "󰣇", 
+    "tooltip": "Arch Linux 🖖"
+  },
+  "hyprland/workspaces": {
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y 年 %m 月 %d 日}",
+  },
+  "cpu": { "format": " {usage}%", "tooltip": false },
+  "memory": { "format": " {}%" },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""],
+  },
+  "battery": {
+    "states": { "good": 80, "warning": 30, "critical": 15 },
+    "format": "{capacity}% {icon}",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""],
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  },
+  "pulseaudio": {
+    "backend": "pipewire",
+    "format": "{icon} {volume}%",
+    "format-muted": " Muted",
+    "format-icons": { "default": [" ", " ", " "] },
+    "tooltip": true,
+  },
+}
