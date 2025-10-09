@@ -4,6 +4,8 @@
 
 ![yoda_hyprland preview](assets/with_wofi.png)
 
+![yoda_hyprland_with_code preview](assets/preview_with_code.png)
+
 ## Info
 
 - **Operating System:** Arch Linux
