@@ -1,6 +1,6 @@
 ![yoda_hyprland preview](assets/with_wofi.png)
 
-# Hyprland - Yoda Theme
+# Hyprland - Yoda theme
 
 - **Operating System:** Arch Linux
 - **Window Manager:** Hyprland
@@ -10,7 +10,7 @@
 - **Notifications:** Mako
 - **Terminal:** Alacritty
 - **File Manager:** Thunar
-- **Text Editor:** Neovim
+- **Text Editor:** [Neovim(yoda.nvim)](https://github.com/kuri-sun/yoda.nvim)
 - **Web Browser:** Google Chrome
 - **Wallpaper Manager:** Hyprpaper
 - **Input Method:** Fcitx5 (with Mozc for Japanese)
@@ -21,7 +21,7 @@ If you want to install this setup on Arch Linux or any other distro, I recommend
 
 ```bash
 # Complete installation - runs all scripts in order
-bash ~/.config/scripts/install-everything.sh
+bash ~/.config/scripts/install-master.sh
 ```
 
 <details>
@@ -67,8 +67,8 @@ bash ~/.config/scripts/install-everything.sh
 
 ## Package Lists
 
-- `pkglist.txt` - Contains all official Arch packages (74 packages)
-- `aurlist.txt` - Contains AUR packages (yay, paru, google-chrome)
+- `pkglist.txt` - Official Arch packages
+- `aurlist.txt` - AUR packages
 
 To update these lists after installing/removing packages:
 
