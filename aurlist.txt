@@ -1,0 +1,4 @@
+google-chrome
+paru-debug
+yay
+yay-debug
