@@ -7,7 +7,7 @@
 
 /* --- Window --- */
 #window {
-  background-color: rgba(5, 7, 5, 0.95); /* Alacritty background */
+  background-color: rgba(5, 7, 5, 0.5); /* Alacritty background */
   color: #b9f6ca; /* Alacritty foreground */
   border: 2px solid rgba(0, 255, 153, 0.6); /* Jedi green glow */
   border-radius: 10px;
@@ -27,6 +27,11 @@
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: 500;
+}
+#input:focus {
+  outline: none; /* Remove default outline */
+  border: 2px solid rgba(0, 255, 153, 0.6); /* Jedi green glow */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Optional: Add a subtle shadow */
 }
 
 /* --- Selected input text --- */
