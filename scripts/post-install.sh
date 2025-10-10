@@ -20,6 +20,35 @@ else
 fi
 echo ""
 
+# Install oh-my-zsh
+echo "Installing oh-my-zsh..."
+if [ -d "$HOME/.oh-my-zsh" ]; then
+    echo "✓ oh-my-zsh is already installed"
+else
+    # Install oh-my-zsh (unattended)
+    RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "✓ oh-my-zsh installed"
+fi
+
+# Copy yoda theme to oh-my-zsh
+echo "Setting up yoda theme..."
+if [ -f "$HOME/.config/nvim/lua/yoda.nvim/extras/oh-my-zsh/yoda.zsh-theme" ]; then
+    cp "$HOME/.config/nvim/lua/yoda.nvim/extras/oh-my-zsh/yoda.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/"
+    echo "✓ Yoda theme installed"
+else
+    echo "⚠ Warning: yoda.zsh-theme not found in nvim config"
+fi
+
+# Copy .zshrc configuration
+echo "Setting up .zshrc..."
+if [ -f "$HOME/.config/.zshrc" ]; then
+    cp "$HOME/.config/.zshrc" "$HOME/.zshrc"
+    echo "✓ .zshrc configured"
+else
+    echo "⚠ Warning: .zshrc template not found in ~/.config/"
+fi
+echo ""
+
 # Enable NetworkManager
 echo "Enabling NetworkManager..."
 if systemctl is-enabled NetworkManager &> /dev/null; then
@@ -60,6 +89,9 @@ echo "========================================"
 echo ""
 echo "Configuration summary:"
 echo "  ✓ Zsh set as default shell"
+echo "  ✓ oh-my-zsh installed"
+echo "  ✓ Yoda theme configured"
+echo "  ✓ .zshrc configured"
 echo "  ✓ NetworkManager enabled and running"
 echo "  ✓ Firewall (UFW) enabled and active"
 echo ""

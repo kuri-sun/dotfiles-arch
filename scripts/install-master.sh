@@ -13,7 +13,7 @@ echo ""
 echo "This script will perform the following:"
 echo "  1. Install all official Arch packages (74 packages)"
 echo "  2. Install all AUR packages (yay, paru, google-chrome)"
-echo "  3. Configure system settings (zsh, NetworkManager, firewall)"
+echo "  3. Configure system settings (zsh, oh-my-zsh, NetworkManager, firewall)"
 echo ""
 echo "Your configuration files should already be in ~/.config/"
 echo ""
@@ -43,7 +43,7 @@ echo ""
 echo "========================================"
 echo "Step 3: Post-Installation Configuration"
 echo "========================================"
-# Sets up zsh, NetworkManager, and firewall
+# Sets up zsh, oh-my-zsh, NetworkManager, and firewall
 # Offers to reboot the system
 bash "$SCRIPT_DIR/post-install.sh"
 
