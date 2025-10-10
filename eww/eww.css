@@ -1,0 +1,210 @@
+/* Yoda Theme Color Palette */
+* {
+  all: unset;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  color: #b9f6ca;
+}
+
+/* Dashboard Container */
+.dashboard {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Widget Base Styles */
+.widget {
+  background: rgba(5, 7, 5, 0.92);
+  border-radius: 12px;
+  padding: 16px;
+  border: 2px solid rgba(0, 255, 153, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Widget Header */
+.widget-header {
+  margin-bottom: 12px;
+}
+
+.widget-icon {
+  font-size: 22px;
+  color: #00ff99;
+  margin-right: 8px;
+}
+
+.widget-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00ff99;
+}
+
+/* ===== TOKYO WEATHER WIDGET ===== */
+.weather-card {
+  border-color: rgba(0, 255, 153, 0.3);
+}
+
+.weather-main {
+  padding: 8px 0;
+}
+
+.weather-icon-large {
+  font-size: 64px;
+  color: #00ff99;
+  text-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+}
+
+.weather-temp-large {
+  font-size: 48px;
+  font-weight: 700;
+  color: #b9f6ca;
+}
+
+.weather-condition-text {
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-details-row {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.detail-label {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00ff99;
+}
+
+/* ===== SYSTEM MONITOR WIDGET ===== */
+.system-card {
+  border-color: rgba(0, 255, 153, 0.3);
+  padding-bottom: 28px;
+}
+
+.metrics-grid {
+  padding: 4px 0;
+}
+
+.metric-row {
+  padding: 6px 0;
+}
+
+.metric-icon-simple {
+  font-size: 24px;
+  color: #00ff99;
+}
+
+.metric-info {
+  min-width: 0;
+}
+
+.metric-label {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.metric-bar {
+  min-height: 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 255, 153, 0.05);
+}
+
+.metric-bar trough {
+  min-height: 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 255, 153, 0.05);
+}
+
+.metric-bar progress {
+  min-height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #00ff99, #66ffb2);
+}
+
+.metric-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #b9f6ca;
+  min-width: 0;
+}
+
+.metric-value-large {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00ff99;
+  margin-top: 4px;
+}
+
+/* ===== STORAGE WIDGET ===== */
+.storage-card {
+  border-color: rgba(0, 255, 153, 0.3);
+}
+
+.storage-visual {
+  padding: 8px 0;
+}
+
+.storage-ring {
+  margin-bottom: 16px;
+  padding: 0;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+.storage-progress-bg {
+  min-width: 150px;
+  min-height: 150px;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.storage-progress {
+  min-width: 150px;
+  min-height: 150px;
+  color: #00ff99;
+}
+
+.storage-center {
+}
+
+.storage-percent-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #b9f6ca;
+  margin-bottom: -5px;
+}
+
+.storage-label-small {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: -5px;
+  font-weight: 600;
+}
+
+.storage-stats {
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 255, 153, 0.15);
+}
+
+.storage-stat-label {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.storage-stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #b9f6ca;
+}
