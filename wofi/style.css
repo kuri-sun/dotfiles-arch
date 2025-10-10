@@ -7,14 +7,17 @@
 
 /* --- Window --- */
 #window {
-  background-color: rgba(5, 7, 5, 0.85); /* Increased opacity for better readability */
+  background-color: rgba(
+    5,
+    7,
+    5,
+    0.85
+  ); /* Increased opacity for better readability */
   color: #b9f6ca; /* Alacritty foreground */
   border: 2px solid rgba(0, 255, 153, 0.6); /* Jedi green glow */
   border-radius: 10px;
   padding: 12px;
   box-shadow: 0 0 12px rgba(0, 255, 153, 0.15); /* subtle lightsaber glow */
-  backdrop-filter: blur(10px); /* Add blur effect */
-  -webkit-backdrop-filter: blur(10px);
 }
 
 /* --- Outer box --- */
@@ -24,7 +27,12 @@
 
 /* --- Input box --- */
 #input {
-  background-color: rgba(0, 20, 10, 0.7); /* Darker background for better contrast */
+  background-color: rgba(
+    0,
+    20,
+    10,
+    0.7
+  ); /* Darker background for better contrast */
   color: #b9f6ca;
   padding: 8px 12px;
   border-radius: 6px;
