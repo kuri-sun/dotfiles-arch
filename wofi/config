@@ -1,12 +1,14 @@
-## General 
+## General
 show=drun
 prompt=Search Apps...
 normal_windows=true
 layer=top
+width=450
+height=350
 
 # Images
 allow_markup=true
-allow_images=true
+allow_images=false
 image_size=24
 
 # Search
