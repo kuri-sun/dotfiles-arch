@@ -17,7 +17,7 @@
   background: rgba(5, 7, 5, 0.92);
   border-radius: 12px;
   padding: 16px;
-  border: 2px solid rgba(0, 255, 153, 0.2);
+  border: 3px solid rgba(0, 255, 136, 0.6);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
@@ -40,7 +40,6 @@
 
 /* ===== TOKYO WEATHER WIDGET ===== */
 .weather-card {
-  border-color: rgba(0, 255, 153, 0.3);
 }
 
 .weather-main {
@@ -87,7 +86,6 @@
 
 /* ===== SYSTEM MONITOR WIDGET ===== */
 .system-card {
-  border-color: rgba(0, 255, 153, 0.3);
   padding-bottom: 28px;
 }
 
@@ -148,7 +146,6 @@
 
 /* ===== STORAGE WIDGET ===== */
 .storage-card {
-  border-color: rgba(0, 255, 153, 0.3);
 }
 
 .storage-visual {
