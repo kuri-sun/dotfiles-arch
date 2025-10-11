@@ -119,18 +119,20 @@
 
 ;; Main Dashboard
 (defwidget dashboard []
-  (box :class "dashboard" :orientation "v" :space-evenly false :spacing 12
-    (tokyo_weather)
-    (media_player)
-    (system_monitor)
-    (storage_info)))
+  (box :class "dashboard" :orientation "h" :space-evenly false :spacing 12
+    (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
+      (tokyo_weather)
+      (system_monitor)
+      (storage_info))
+    (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
+      (media_player))))
 
 ;; Main Window
 (defwindow dashboard_window
   :monitor 0
   :geometry (geometry :x "20px"
                       :y "20px"
-                      :width "320px"
+                      :width "660px"
                       :anchor "top left")
   :stacking "bg"
   :windowtype "dock"
