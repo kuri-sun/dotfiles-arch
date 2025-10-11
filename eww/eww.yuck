@@ -4,14 +4,17 @@
 (defpoll tokyo_icon :interval "30m" "scripts/weather.sh icon tokyo")
 (defpoll tokyo_humidity :interval "30m" "scripts/weather.sh humidity tokyo")
 
+;; Media Player
+(defpoll music_status :interval "1s" "scripts/music.sh status")
+(defpoll music_title :interval "1s" "scripts/music.sh title")
+(defpoll music_artist :interval "1s" "scripts/music.sh artist")
+
 ;; System stats
 (defpoll cpu_usage :interval "2s" "scripts/system.sh cpu")
 (defpoll cpu_percent :interval "2s" "scripts/system.sh cpu_percent")
 (defpoll cpu_text :interval "2s" "scripts/system.sh cpu_text")
 (defpoll memory_usage :interval "2s" "scripts/system.sh memory")
 (defpoll memory_text :interval "2s" "scripts/system.sh memory_text")
-(defpoll battery_usage :interval "5s" "scripts/system.sh battery")
-(defpoll battery_text :interval "5s" "scripts/system.sh battery_text")
 (defpoll cpu_temp :interval "3s" "scripts/system.sh temp")
 
 ;; Storage
@@ -24,8 +27,7 @@
 (defwidget tokyo_weather []
   (box :class "widget weather-card" :orientation "v" :space-evenly false :spacing 10
     (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-title tokyo-title" :text "Tokyo" :xalign 0)
-      (label :class "widget-icon tokyo-icon" :text tokyo_icon))
+      (label :class "widget-title tokyo-title" :text "Tokyo" :xalign 0))
     (box :class "weather-main" :orientation "v" :space-evenly false :spacing 6
       (box :orientation "h" :space-evenly false :spacing 20 :valign "center"
         (box :orientation "v" :space-evenly false :spacing 2
@@ -56,52 +58,70 @@
           (box :orientation "h" :space-evenly false :spacing 20
             (label :class "metric-label" :text "Memory" :xalign 0)
             (label :class "metric-value" :text memory_text))
-          (progress :class "metric-bar" :value memory_usage)))
-      (box :class "metric-row" :orientation "h" :space-evenly false :spacing 12
-        (label :class "metric-icon-simple battery" :text "")
-        (box :class "metric-info" :orientation "v" :space-evenly false :spacing 8
-          (box :orientation "h" :space-evenly false :spacing 20
-            (label :class "metric-label" :text "Battery" :xalign 0)
-            (label :class "metric-value" :text battery_text))
-          (progress :class "metric-bar" :value battery_usage))))))
+          (progress :class "metric-bar" :value memory_usage))))))
 
 ;; Storage Widget
 (defwidget storage_info []
-  (box :class "widget storage-card" :orientation "v" :space-evenly false :spacing 10
+  (box :class "widget storage-card" :orientation "v" :space-evenly false :spacing 8
     (box :class "widget-header" :orientation "h" :space-evenly false
       (label :class "widget-icon" :text "")
       (label :class "widget-title" :text "Storage" :xalign 0))
-    (box :class "storage-visual" :orientation "v" :space-evenly false :spacing 8
+    (box :class "storage-visual" :orientation "v" :space-evenly false :spacing 6
       (box :class "storage-ring" :orientation "v" :valign "center" :halign "center"
         (overlay
           (circular-progress :value 100
                             :class "storage-progress-bg"
-                            :thickness 12
+                            :thickness 9
                             :start-at 75
                             :clockwise true)
           (circular-progress :value storage_percent
                             :class "storage-progress"
-                            :thickness 12
+                            :thickness 9
                             :start-at 75
                             :clockwise true)
           (box :class "storage-center" :orientation "v" :valign "center" :halign "center" :spacing 0
             (label :class "storage-percent-text" :text "${storage_percent}%")
             (label :class "storage-label-small" :text "Used"))))
-      (box :class "storage-stats" :orientation "h" :space-evenly true :spacing 8
-        (box :orientation "v" :space-evenly false :spacing 2
+      (box :class "storage-stats" :orientation "h" :space-evenly true :spacing 6
+        (box :orientation "v" :space-evenly false :spacing 1
           (label :class "storage-stat-label" :text "Used")
           (label :class "storage-stat-value" :text storage_used))
-        (box :orientation "v" :space-evenly false :spacing 2
+        (box :orientation "v" :space-evenly false :spacing 1
           (label :class "storage-stat-label" :text "Free")
           (label :class "storage-stat-value" :text storage_free))
-        (box :orientation "v" :space-evenly false :spacing 2
+        (box :orientation "v" :space-evenly false :spacing 1
           (label :class "storage-stat-label" :text "Total")
           (label :class "storage-stat-value" :text storage_total))))))
+
+;; Media Player Widget
+(defwidget media_player []
+  (box :class "widget media-card"
+       :orientation "v"
+       :space-evenly false
+       :spacing 8
+       :visible {music_status != "stopped"}
+    (box :class "widget-header" :orientation "h" :space-evenly false
+      (label :class "widget-icon media-icon" :text "")
+      (label :class "widget-title" :text "Now Playing" :xalign 0)
+      (label :class "media-status-icon"
+             :text {music_status == "playing" ? "󰐊" : "󰏤"}))
+    (box :class "media-content" :orientation "v" :space-evenly false :spacing 6
+      (label :class "media-title"
+             :text {music_title}
+             :xalign 0
+             :limit-width 30
+             :wrap false)
+      (label :class "media-artist"
+             :text {music_artist}
+             :xalign 0
+             :limit-width 30
+             :wrap false))))
 
 ;; Main Dashboard
 (defwidget dashboard []
   (box :class "dashboard" :orientation "v" :space-evenly false :spacing 12
     (tokyo_weather)
+    (media_player)
     (system_monitor)
     (storage_info)))
 

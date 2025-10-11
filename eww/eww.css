@@ -17,13 +17,13 @@
   background: rgba(5, 7, 5, 0.92);
   border-radius: 12px;
   padding: 16px;
-  border: 3px solid rgba(0, 255, 136, 0.6);
+  border: 2px solid rgba(0, 180, 90, 0.5);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 /* Widget Header */
 .widget-header {
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 
 .widget-icon {
@@ -164,21 +164,21 @@
 }
 
 .storage-ring {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   padding: 0;
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 110px;
+  min-height: 110px;
 }
 
 .storage-progress-bg {
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 110px;
+  min-height: 110px;
   color: rgba(255, 255, 255, 0.1);
 }
 
 .storage-progress {
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 110px;
+  min-height: 110px;
   color: #00ff99;
 }
 
@@ -186,33 +186,71 @@
 }
 
 .storage-percent-text {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #b9f6ca;
-  margin-bottom: -5px;
+  margin-bottom: -4px;
 }
 
 .storage-label-small {
-  font-size: 16px;
+  font-size: 13px;
   color: #ffffff;
-  margin-top: -5px;
+  margin-top: -4px;
   font-weight: 600;
 }
 
 .storage-stats {
-  padding-top: 12px;
+  padding-top: 8px;
   border-top: 1px solid rgba(0, 255, 153, 0.15);
 }
 
 .storage-stat-label {
   font-size: 15px;
   color: #ffffff;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   font-weight: 600;
 }
 
 .storage-stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b9f6ca;
+}
+
+/* ===== MEDIA PLAYER WIDGET ===== */
+.media-card {
+}
+
+.media-icon {
+  font-size: 24px;
+  color: #00ff99;
+  text-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+}
+
+.media-status-icon {
+  font-size: 20px;
+  color: #00ff99;
+  margin-left: 8px;
+  text-shadow: 0 0 16px rgba(0, 255, 153, 0.8), 0 0 8px rgba(0, 255, 153, 0.6);
+}
+
+.media-content {
+  padding: 8px 0 2px 16px;
+  border-top: 1px solid rgba(0, 255, 153, 0.2);
+  margin-top: 6px;
+}
+
+.media-title {
   font-size: 16px;
   font-weight: 700;
   color: #b9f6ca;
+  text-shadow: 0 0 8px rgba(185, 246, 202, 0.3);
+  margin-bottom: 4px;
+}
+
+.media-artist {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
