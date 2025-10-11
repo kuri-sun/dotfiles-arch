@@ -18,7 +18,7 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%B %d, %Y}",
   },
-  "cpu": { "format": " {usage}%", "tooltip": false },
+  "cpu": { "format": " {usage}%", "tooltip": true, "tooltip-format": "CPU Usage: {usage}%\nLoad: {load}" },
   "memory": { "format": " {}%" },
   "temperature": {
     "critical-threshold": 80,
