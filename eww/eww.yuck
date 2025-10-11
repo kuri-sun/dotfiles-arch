@@ -126,6 +126,13 @@
       (system_monitor)
       (storage_info))))
 
+;; Yoda Quote Widget
+(defwidget yoda_quote []
+  (box :class "yoda-quote-widget" :orientation "v" :space-evenly false
+    (label :class "yoda-quote-text" :text "Do. Or do not." :xalign 1)
+    (label :class "yoda-quote-text" :text "There is no try." :xalign 1)
+    (label :class "yoda-quote-author" :text "— Master Yoda" :xalign 1)))
+
 ;; Main Window
 (defwindow dashboard_window
   :monitor 0
@@ -137,3 +144,15 @@
   :windowtype "dock"
   :wm-ignore false
   (dashboard))
+
+;; Yoda Quote Window
+(defwindow yoda_window
+  :monitor 0
+  :geometry (geometry :x "60px"
+                      :y "60px"
+                      :width "400px"
+                      :anchor "bottom right")
+  :stacking "bg"
+  :windowtype "dock"
+  :wm-ignore false
+  (yoda_quote))

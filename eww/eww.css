@@ -259,3 +259,25 @@
   font-weight: 500;
   letter-spacing: 0.3px;
 }
+
+/* ===== YODA QUOTE WIDGET ===== */
+.yoda-quote-widget {
+  background: transparent;
+  padding: 16px;
+}
+
+.yoda-quote-text {
+  font-family: "Noto Serif", serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 4px 0;
+}
+
+.yoda-quote-author {
+  font-family: "Noto Serif", serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 8px;
+  font-style: italic;
+}
