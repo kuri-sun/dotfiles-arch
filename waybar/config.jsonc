@@ -9,9 +9,11 @@
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["clock", "pulseaudio", "network", "battery", "custom/power"],
   "custom/arch": {
-    "format": "󰣇",
-    "tooltip": "Arch Linux 🖖",
-    "on-click": "~/.config/eww/scripts/toggle-dashboard.sh",
+    "exec": "~/.config/eww/scripts/dashboard-status.sh",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 8,
+    "on-click": "~/.config/eww/scripts/toggle-dashboard.sh && pkill -RTMIN+8 waybar",
   },
   "hyprland/workspaces": {},
   "clock": {

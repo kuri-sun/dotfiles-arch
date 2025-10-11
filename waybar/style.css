@@ -128,6 +128,11 @@ window#waybar.hidden {
   background-color: rgba(0, 255, 153, 0.18);
 }
 
+#custom-arch.active {
+  color: #00ff99;
+  background-color: rgba(0, 255, 153, 0.18);
+}
+
 /* --- Network --- */
 #network {
   background-color: rgba(0, 255, 153, 0.08);
