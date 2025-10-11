@@ -27,6 +27,7 @@
 (defwidget tokyo_weather []
   (box :class "widget weather-card" :orientation "v" :space-evenly false :spacing 10
     (box :class "widget-header" :orientation "h" :space-evenly false
+      (label :class "widget-icon tokyo-icon" :text tokyo_icon)
       (label :class "widget-title tokyo-title" :text "Tokyo" :xalign 0))
     (box :class "weather-main" :orientation "v" :space-evenly false :spacing 6
       (box :orientation "h" :space-evenly false :spacing 20 :valign "center"
@@ -42,8 +43,7 @@
 (defwidget system_monitor []
   (box :class "widget system-card" :orientation "v" :space-evenly false :spacing 10
     (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-icon" :text "")
-      (label :class "widget-title" :text "System" :xalign 0))
+      (label :class "widget-title system-title" :text "System" :xalign 0))
     (box :class "metrics-grid" :orientation "v" :space-evenly false :spacing 12
       (box :class "metric-row" :orientation "h" :space-evenly false :spacing 12
         (label :class "metric-icon-simple cpu" :text "")
@@ -64,8 +64,7 @@
 (defwidget storage_info []
   (box :class "widget storage-card" :orientation "v" :space-evenly false :spacing 8
     (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-icon" :text "")
-      (label :class "widget-title" :text "Storage" :xalign 0))
+      (label :class "widget-title storage-title" :text "Storage" :xalign 0))
     (box :class "storage-visual" :orientation "v" :space-evenly false :spacing 6
       (box :class "storage-ring" :orientation "v" :valign "center" :halign "center"
         (overlay
@@ -100,11 +99,12 @@
        :space-evenly false
        :spacing 8
        :visible {music_status != "stopped"}
-    (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-icon media-icon" :text "")
-      (label :class "widget-title" :text "Now Playing" :xalign 0)
+    (box :class "widget-header" :orientation "h" :space-evenly false :valign 1.0
+      (label :class "widget-icon media-icon" :text "" :valign 1.0)
       (label :class "media-status-icon"
-             :text {music_status == "playing" ? "󰐊" : "󰏤"}))
+             :text {music_status == "playing" ? "󰐊" : "󰏤"}
+             :valign 1.0)
+      (label :class "widget-title" :text "Now Playing" :xalign 0 :valign 1.0))
     (box :class "media-content" :orientation "v" :space-evenly false :spacing 6
       (label :class "media-title"
              :text {music_title}
@@ -122,10 +122,9 @@
   (box :class "dashboard" :orientation "h" :space-evenly false :spacing 12
     (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
       (tokyo_weather)
+      (media_player)
       (system_monitor)
-      (storage_info))
-    (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
-      (media_player))))
+      (storage_info))))
 
 ;; Main Window
 (defwindow dashboard_window

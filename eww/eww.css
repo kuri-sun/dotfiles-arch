@@ -27,14 +27,14 @@
 }
 
 .widget-icon {
-  font-size: 28px;
+  font-size: 22px;
   color: #00ff99;
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .tokyo-icon {
-  margin-right: 0;
-  margin-left: 16px;
+  margin-right: 12px;
+  margin-left: 8px;
 }
 
 .widget-title {
@@ -44,7 +44,11 @@
 }
 
 .tokyo-title {
-  margin-left: 16px;
+  margin-left: 0;
+}
+
+.system-title, .storage-title {
+  margin-left: 8px;
 }
 
 
@@ -54,7 +58,7 @@
 }
 
 .weather-main {
-  padding: 8px 0 8px 16px;
+  padding: 8px 8px 8px 8px;
 }
 
 .weather-icon-large {
@@ -101,7 +105,7 @@
 }
 
 .metrics-grid {
-  padding: 4px 0;
+  padding: 4px 0 4px 0;
 }
 
 .metric-row {
@@ -111,6 +115,7 @@
 .metric-icon-simple {
   font-size: 24px;
   color: #00ff99;
+  margin-right: 4px;
 }
 
 .metric-info {
@@ -160,7 +165,7 @@
 }
 
 .storage-visual {
-  padding: 8px 0;
+  padding: 8px 0 8px 0;
 }
 
 .storage-ring {
@@ -230,14 +235,14 @@
 .media-status-icon {
   font-size: 20px;
   color: #00ff99;
-  margin-left: 8px;
+  margin-right: 16px;
   text-shadow: 0 0 16px rgba(0, 255, 153, 0.8), 0 0 8px rgba(0, 255, 153, 0.6);
 }
 
 .media-content {
-  padding: 8px 0 2px 16px;
-  border-top: 1px solid rgba(0, 255, 153, 0.2);
-  margin-top: 6px;
+  padding: 8px 8px 2px 8px;
+  border-top: none;
+  margin-top: 2px;
 }
 
 .media-title {
