@@ -11,6 +11,7 @@
   "custom/arch": {
     "format": "󰣇",
     "tooltip": "Arch Linux 🖖",
+    "on-click": "~/.config/eww/scripts/toggle-dashboard.sh",
   },
   "hyprland/workspaces": {},
   "clock": {
