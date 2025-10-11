@@ -11,6 +11,7 @@
 - **Operating System:** Arch Linux
 - **Window Manager:** Hyprland
 - **Status Bar:** Waybar
+- **Widgets:** Eww (Elkowar's Wacky Widgets)
 - **Launcher:** Wofi
 - **Session Manager:** Swaylock + Swayidle
 - **Notifications:** Mako
@@ -35,7 +36,7 @@ bash ~/.config/scripts/install-master.sh
 
 **Core Hyprland & Wayland:**
 
-> hyprland, hyprpaper, swayidle, swaylock, wl-clipboard, waybar, wofi, mako
+> hyprland, hyprpaper, swayidle, swaylock, wl-clipboard, waybar, eww, wofi, mako
 
 **Screen Capture & Recording:**
 
