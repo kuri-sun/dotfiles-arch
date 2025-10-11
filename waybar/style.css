@@ -33,7 +33,8 @@ window#waybar.hidden {
 #mpd,
 #pulseaudio,
 #network,
-#battery {
+#battery,
+#custom-power {
   padding: 0px 12px;
   margin: 0px 4px;
   color: #b9f6ca; /* Alacritty foreground */
@@ -52,6 +53,12 @@ window#waybar.hidden {
   border-radius: 6px;
   font-weight: 600;
   font-size: 19px; /* Larger icon */
+}
+
+/* --- Custom Power module --- */
+#custom-power {
+  padding: 0px 10px; /* Reduced padding */
+  font-size: 20px; /* Larger icon */
 }
 
 /* --- Workspaces --- */
@@ -110,7 +117,8 @@ window#waybar.hidden {
 #temperature:hover,
 #network:hover,
 #battery:hover,
-#pulseaudio:hover {
+#pulseaudio:hover,
+#custom-power:hover {
   color: #00ff99;
   background-color: rgba(0, 255, 153, 0.18);
 }
