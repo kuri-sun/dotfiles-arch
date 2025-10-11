@@ -1,3 +1,5 @@
+eww
+eww-debug
 google-chrome
 paru-debug
 yay

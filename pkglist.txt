@@ -27,6 +27,7 @@ htop
 hyprland
 hyprpaper
 intel-media-driver
+jq
 lazygit
 less
 libva-utils
@@ -51,6 +52,7 @@ python-pip
 python-pydbus
 reflector
 ripgrep
+sassc
 slurp
 sof-firmware
 sudo
