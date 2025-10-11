@@ -24,19 +24,17 @@
 (defwidget tokyo_weather []
   (box :class "widget weather-card" :orientation "v" :space-evenly false :spacing 10
     (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-icon" :text "")
-      (label :class "widget-title" :text "Tokyo" :xalign 0))
-    (box :class "weather-main" :orientation "h" :space-evenly false :spacing 15
-      (label :class "weather-icon-large" :text tokyo_icon)
-      (box :orientation "v" :space-evenly false :spacing 6
-        (box :orientation "h" :space-evenly false :spacing 20 :valign "center"
-          (box :orientation "v" :space-evenly false :spacing 2
-            (label :class "detail-label" :text "Temp" :xalign 0)
-            (label :class "weather-temp-large" :text "${tokyo_temp}°" :xalign 0))
-          (box :orientation "v" :space-evenly false :spacing 2
-            (label :class "detail-label" :text "Humid" :xalign 0)
-            (label :class "weather-temp-large" :text tokyo_humidity :xalign 0)))
-        (label :class "weather-condition-text" :text tokyo_condition :xalign 0)))))
+      (label :class "widget-title tokyo-title" :text "Tokyo" :xalign 0)
+      (label :class "widget-icon tokyo-icon" :text tokyo_icon))
+    (box :class "weather-main" :orientation "v" :space-evenly false :spacing 6
+      (box :orientation "h" :space-evenly false :spacing 20 :valign "center"
+        (box :orientation "v" :space-evenly false :spacing 2
+          (label :class "detail-label" :text "Temp" :xalign 0)
+          (label :class "weather-temp-large" :text "${tokyo_temp}°" :xalign 0))
+        (box :orientation "v" :space-evenly false :spacing 2
+          (label :class "detail-label" :text "Humid" :xalign 0)
+          (label :class "weather-temp-large" :text tokyo_humidity :xalign 0)))
+      (label :class "weather-condition-text" :text tokyo_condition :xalign 0))))
 
 ;; System Monitor Widget
 (defwidget system_monitor []

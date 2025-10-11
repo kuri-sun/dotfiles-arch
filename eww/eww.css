@@ -27,9 +27,14 @@
 }
 
 .widget-icon {
-  font-size: 22px;
+  font-size: 28px;
   color: #00ff99;
-  margin-right: 8px;
+  margin-right: 16px;
+}
+
+.tokyo-icon {
+  margin-right: 0;
+  margin-left: 16px;
 }
 
 .widget-title {
@@ -38,12 +43,18 @@
   color: #00ff99;
 }
 
+.tokyo-title {
+  margin-left: 16px;
+}
+
+
+
 /* ===== TOKYO WEATHER WIDGET ===== */
 .weather-card {
 }
 
 .weather-main {
-  padding: 8px 0;
+  padding: 8px 0 8px 16px;
 }
 
 .weather-icon-large {
