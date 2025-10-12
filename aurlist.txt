@@ -1,6 +1,7 @@
 eww
 eww-debug
 google-chrome
+obs-cli
 paru-debug
 yay
 yay-debug

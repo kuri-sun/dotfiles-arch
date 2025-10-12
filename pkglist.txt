@@ -68,7 +68,7 @@ ufw
 unzip
 vim
 waybar
-wf-recorder
+obs-studio
 wget
 wireplumber
 wl-clipboard
