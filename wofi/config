@@ -8,7 +8,7 @@ height=350
 
 # Images
 allow_markup=true
-allow_images=false
+allow_images=true
 image_size=24
 
 # Search
