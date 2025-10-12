@@ -36,6 +36,7 @@ linux-firmware
 mako
 mpc
 mpd
+mpv
 neovim
 networkmanager
 nodejs
@@ -43,6 +44,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 npm
+obs-studio
 pamixer
 pavucontrol
 pipewire
@@ -68,7 +70,7 @@ ufw
 unzip
 vim
 waybar
-obs-studio
+wf-recorder
 wget
 wireplumber
 wl-clipboard

@@ -40,7 +40,7 @@ bash ~/.config/scripts/install-master.sh
 
 **Screen Capture & Recording:**
 
-> grim, slurp, obs-studio, obs-cli
+> grim, slurp, obs-studio, obs-cli, mpv
 
 **Terminal & Development:**
 

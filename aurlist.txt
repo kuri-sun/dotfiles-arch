@@ -2,6 +2,10 @@ eww
 eww-debug
 google-chrome
 obs-cli
+obs-cli-debug
 paru-debug
+wlogout
+wlogout-debug
+wlrobs-debug
 yay
 yay-debug
