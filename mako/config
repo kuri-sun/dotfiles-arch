@@ -1,7 +1,10 @@
 font=JetBrains Mono 12
-background-color=#050705ee       # Alacritty background with transparency
-text-color=#b9f6ca               # Alacritty foreground
-border-color=#00ff99             # Jedi green lightsaber
+# Alacritty background with transparency
+background-color=#050705ee
+# Alacritty foreground
+text-color=#b9f6ca
+# Jedi green lightsaber
+border-color=#00ff99
 border-size=2
 border-radius=8
 padding=8
