@@ -1,10 +1,10 @@
 # Hyprland - Yoda
 
-![yoda_desktop preview](assets/desktop.png)
+![yoda_desktop preview](assets/default.png)
 
 ![yoda_hyprland preview](assets/with_wofi.png)
 
-![yoda_hyprland_with_code preview](assets/preview_with_code.png)
+![yoda_hyprland_with_code preview](assets/code.png)
 
 ## Info
 
