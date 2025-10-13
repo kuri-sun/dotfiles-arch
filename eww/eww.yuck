@@ -8,6 +8,7 @@
 (defpoll music_status :interval "1s" "scripts/music.sh status")
 (defpoll music_title :interval "1s" "scripts/music.sh title")
 (defpoll music_artist :interval "1s" "scripts/music.sh artist")
+(defpoll music_cover :interval "1s" "scripts/music.sh cover")
 
 ;; System stats
 (defpoll cpu_usage :interval "2s" "scripts/system.sh cpu")
@@ -105,17 +106,22 @@
              :text {music_status == "playing" ? "󰐊" : "󰏤"}
              :valign 1.0)
       (label :class "widget-title" :text "Now Playing" :xalign 0 :valign 1.0))
-    (box :class "media-content" :orientation "v" :space-evenly false :spacing 6
-      (label :class "media-title"
-             :text {music_title}
-             :xalign 0
-             :limit-width 30
-             :wrap false)
-      (label :class "media-artist"
-             :text {music_artist}
-             :xalign 0
-             :limit-width 30
-             :wrap false))))
+    (box :class "media-content" :orientation "h" :space-evenly false :spacing 12
+      (image :class "media-cover"
+             :path music_cover
+             :image-width 80
+             :image-height 80)
+      (box :orientation "v" :space-evenly false :spacing 6 :valign "center"
+        (label :class "media-title"
+               :text {music_title}
+               :xalign 0
+               :limit-width 30
+               :wrap false)
+        (label :class "media-artist"
+               :text {music_artist}
+               :xalign 0
+               :limit-width 30
+               :wrap false)))))
 
 ;; Main Dashboard
 (defwidget dashboard []
