@@ -1,4 +1,4 @@
-# Hyprland - Yoda
+# dotfiles - Yoda Theme
 
 ![yoda_desktop preview](assets/default.png)
 
