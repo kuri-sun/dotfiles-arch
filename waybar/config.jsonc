@@ -7,7 +7,7 @@
   "margin-right": 12,
   "modules-left": ["custom/arch", "cpu", "memory", "temperature"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["clock", "pulseaudio", "network", "battery", "custom/power"],
+  "modules-right": ["clock", "hyprland/language", "pulseaudio", "network", "battery", "custom/power"],
   "custom/arch": {
     "exec": "~/.config/eww/scripts/dashboard-status.sh",
     "return-type": "json",
@@ -55,5 +55,10 @@
     "format": "⏻",
     "tooltip": false,
     "on-click": "wlogout",
+  },
+  "hyprland/language": {
+    "format": "⌨ {}",
+    "format-en": "EN",
+    "format-ja": "JA",
   },
 }
