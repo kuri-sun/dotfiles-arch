@@ -60,51 +60,38 @@ window#waybar.hidden {
 
 /* --- Workspaces --- */
 #workspaces {
-  padding: 0px 12px;
+  padding: 2px 6px;
   margin: 0px 4px;
+  background-color: transparent;
 }
 
 #workspaces button {
-  padding: 0px 10px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 24px;
-  color: #b9f6ca; /* Alacritty foreground */
-  background-color: rgba(0, 255, 153, 0.08); /* subtle glow */
-  border: none;
-  border-top: none;
-  outline: none;
-  text-decoration: none;
-  box-shadow: none;
-  transition: all 0.3s ease;
-  margin-right: 4px;
+  all: unset;
+  margin: 0 8px;
+  padding: 6px 4px;
+  font-family: "Cormorant", serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(185, 246, 202, 0.4);
+  transition: all 0.25s ease;
 }
 
 #workspaces button:focus {
   outline: none;
-  border: none;
-  border-top: none;
-  text-decoration: none;
-  box-shadow: none;
 }
 
 #workspaces button.active {
   color: #00ff99;
-  background-color: rgba(0, 255, 153, 0.25);
-  outline: none;
-  border: none;
-  border-top: none;
-  text-decoration: none;
-  box-shadow: none;
+  font-weight: 600;
+  text-shadow:
+    0 0 12px rgba(0, 255, 153, 0.8),
+    0 0 6px rgba(0, 255, 153, 0.6);
 }
 
 #workspaces button:hover {
-  background: rgba(0, 255, 153, 0.18);
-  outline: none;
-  border: none;
-  border-top: none;
-  text-decoration: none;
-  box-shadow: none;
+  color: #b9f6ca;
+  text-shadow: 0 0 8px rgba(0, 255, 153, 0.4);
 }
 
 /* --- Hover Glow for all modules --- */
