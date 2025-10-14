@@ -1,10 +1,10 @@
-# dotfiles - Yoda Theme
+# dotfiles
 
-![yoda_desktop preview](assets/default.png)
+![desktop preview](assets/default.png)
 
-![yoda_hyprland preview](assets/wofi.png)
+![hyprland preview](assets/wofi.png)
 
-![yoda_hyprland_with_code preview](assets/code.png)
+![hyprland_with_code preview](assets/code.png)
 
 ## Info
 
