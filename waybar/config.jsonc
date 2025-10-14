@@ -7,7 +7,7 @@
   "margin-right": 12,
   "modules-left": ["custom/arch"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["clock", "custom/language", "pulseaudio", "network", "battery", "custom/power"],
+  "modules-right": ["custom/language", "pulseaudio", "network", "battery", "custom/power"],
   "custom/arch": {
     "exec": "~/.config/eww/scripts/dashboard-status.sh",
     "return-type": "json",
@@ -32,9 +32,9 @@
     "on-click": "activate"
   },
   "clock": {
-    "format": "{:%b %d  %I:%M %p}",
+    "format": "{:%I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%I:%M %p}",
+    "format-alt": "{:%B %d, %Y}",
   },
   "battery": {
     "states": { "good": 80, "warning": 30, "critical": 15 },

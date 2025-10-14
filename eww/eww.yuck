@@ -19,6 +19,13 @@
 ;; Storage
 (defpoll storage_percent :interval "30s" "scripts/storage.sh percent")
 
+;; Date
+(defpoll date_day :interval "10s" "date '+%d'")
+(defpoll date_month :interval "10s" "date '+%b' | tr '[:lower:]' '[:upper:]'")
+(defpoll date_year :interval "10s" "date '+%Y'")
+(defpoll date_weekday :interval "10s" "date '+%A' | tr '[:lower:]' '[:upper:]'")
+(defpoll date_time :interval "1s" "date '+%I:%M %p'")
+
 ;; Circular Stat Item (based on storage widget pattern)
 (defwidget circular_stat [icon value ?color]
   (box :class "stat-item" :orientation "v" :space-evenly false :spacing 6
@@ -89,6 +96,16 @@
       (media_player)
       (system_stats))))
 
+;; Date Widget
+(defwidget date_display []
+  (box :class "date-widget" :orientation "v" :space-evenly false :spacing 4
+    (label :class "date-weekday" :text date_weekday)
+    (box :class "date-main" :orientation "h" :space-evenly false :spacing 8
+      (label :class "date-month" :text date_month)
+      (label :class "date-day" :text date_day))
+    (label :class "date-year" :text date_year)
+    (label :class "date-time" :text date_time)))
+
 ;; Main Window
 (defwindow dashboard_window
   :monitor 0
@@ -100,3 +117,14 @@
   :windowtype "dock"
   :wm-ignore false
   (dashboard))
+
+;; Date Window
+(defwindow date_window
+  :monitor 0
+  :geometry (geometry :x "20px"
+                      :y "20px"
+                      :anchor "bottom right")
+  :stacking "bg"
+  :windowtype "dock"
+  :wm-ignore false
+  (date_display))

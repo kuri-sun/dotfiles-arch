@@ -340,3 +340,61 @@
   margin-top: 8px;
   font-style: italic;
 }
+
+/* ===== DATE WIDGET ===== */
+.date-widget {
+  background: rgba(5, 7, 5, 0.95);
+  border-radius: 20px;
+  padding: 28px 40px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(0, 255, 153, 0.2);
+  min-width: 240px;
+}
+
+.date-weekday {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(185, 246, 202, 0.8);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.date-main {
+  margin: 12px 0;
+}
+
+.date-month {
+  font-size: 42px;
+  font-weight: 700;
+  color: #00ff99;
+  text-shadow:
+    0 0 20px rgba(0, 255, 153, 0.6),
+    0 0 10px rgba(0, 255, 153, 0.4);
+}
+
+.date-day {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow:
+    0 0 24px rgba(0, 255, 153, 0.4),
+    0 0 12px rgba(0, 255, 153, 0.3);
+}
+
+.date-year {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(185, 246, 202, 0.7);
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.date-time {
+  font-size: 26px;
+  font-weight: 600;
+  color: #00ff99;
+  text-shadow: 0 0 16px rgba(0, 255, 153, 0.5);
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
