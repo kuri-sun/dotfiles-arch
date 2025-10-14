@@ -33,7 +33,7 @@ window#waybar.hidden {
 #custom-power,
 #language {
   padding: 0px 12px;
-  margin: 0px 4px;
+  margin: 0px 2px;
   color: #b9f6ca; /* Alacritty foreground */
   border-radius: 6px;
   background-color: rgba(0, 255, 153, 0.08); /* subtle glow like cursor */
@@ -44,7 +44,7 @@ window#waybar.hidden {
 /* --- Custom Arch module --- */
 #custom-arch {
   padding: 0px 12px;
-  margin: 0px 4px;
+  margin: 0px 2px;
   color: #b9f6ca; /* Same as other modules */
   background-color: rgba(0, 255, 153, 0.08); /* Same as other modules */
   border-radius: 6px;
@@ -61,16 +61,16 @@ window#waybar.hidden {
 /* --- Workspaces --- */
 #workspaces {
   padding: 2px 6px;
-  margin: 0px 4px;
+  margin: 0px 2px;
   background-color: transparent;
 }
 
 #workspaces button {
   all: unset;
-  margin: 0 8px;
+  margin: 0 4px;
   padding: 6px 4px;
   font-family: "Cormorant", serif;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
   color: rgba(185, 246, 202, 0.4);

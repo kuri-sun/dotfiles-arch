@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
   "height": 40,
-  "spacing": 8,
+  "spacing": 4,
   "margin-top": 8,
   "margin-left": 12,
   "margin-right": 12,
@@ -32,17 +32,18 @@
     "on-click": "activate"
   },
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%b %d  %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%B %d, %Y}",
+    "format-alt": "{:%I:%M %p}",
   },
   "battery": {
     "states": { "good": 80, "warning": 30, "critical": 15 },
-    "format": "{capacity}% {icon}",
-    "format-full": "{icon} {capacity}%",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format": "{icon}",
+    "format-full": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
     "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{capacity}% - {timeTo}",
   },
   "network": {
     "format-wifi": "󰤨",
@@ -54,9 +55,10 @@
   },
   "pulseaudio": {
     "backend": "pipewire",
-    "format": "{icon}{volume}%",
-    "format-muted": "Muted",
+    "format": "{icon}",
+    "format-muted": "",
     "format-icons": { "default": [" ", " ", " "] },
+    "tooltip-format": "{volume}%",
     "tooltip": true,
   },
   "custom/power": {
@@ -65,8 +67,8 @@
     "on-click": "wlogout",
   },
   "hyprland/language": {
-    "format": "⌨ {}",
-    "format-en": "EN",
-    "format-ja": "JA",
+    "format": "{}",
+    "format-en": "A",
+    "format-ja": "あ",
   },
 }
