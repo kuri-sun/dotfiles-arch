@@ -5,7 +5,7 @@
   "margin-top": 8,
   "margin-left": 12,
   "margin-right": 12,
-  "modules-left": [],
+  "modules-left": ["custom/music"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["custom/arch", "custom/language", "pulseaudio", "network", "battery", "custom/power"],
   "custom/arch": {
@@ -65,6 +65,13 @@
     "format": "⏻",
     "tooltip": false,
     "on-click": "wlogout",
+  },
+  "custom/music": {
+    "exec": "~/.config/waybar/scripts/music.sh",
+    "interval": 2,
+    "format": "{}",
+    "max-length": 50,
+    "on-click": "playerctl play-pause",
   },
   "custom/language": {
     "exec": "~/.config/waybar/scripts/fcitx5-status.sh",

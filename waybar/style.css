@@ -32,7 +32,8 @@ window#waybar.hidden {
 #battery,
 #custom-power,
 #language,
-#custom-language {
+#custom-language,
+#custom-music {
   padding: 0px 12px;
   margin: 0px 2px;
   color: #00ff99;
