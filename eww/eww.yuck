@@ -27,7 +27,7 @@
 (defpoll date_time :interval "1s" "date '+%I:%M %p'")
 
 ;; Circular Stat Item (based on storage widget pattern)
-(defwidget circular_stat [icon value ?color]
+(defwidget circular_stat [icon value ?color ?unit]
   (box :class "stat-item" :orientation "v" :space-evenly false :spacing 6
     (box :class "stat-ring" :orientation "v" :valign "center" :halign "center"
       (overlay
@@ -43,7 +43,7 @@
                           :clockwise true)
         (box :class "stat-center" :orientation "v" :valign "center" :halign "center"
           (label :class "stat-icon" :text icon))))
-    (label :class "stat-percent" :text "${round(value, 0)}%")))
+    (label :class "stat-percent" :text "${round(value, 0)}${unit ?: '%'}")))
 
 ;; System Stats Widget with Circular Graphs
 (defwidget system_stats []
@@ -52,7 +52,7 @@
       (circular_stat :icon "󰻠" :value cpu_percent :color "cpu-color")
       (circular_stat :icon "󰍛" :value memory_usage :color "memory-color")
       (circular_stat :icon "󰋊" :value storage_percent :color "storage-color")
-      (circular_stat :icon "󰔏" :value cpu_temp :color "temp-color"))))
+      (circular_stat :icon "󰔏" :value cpu_temp :color "temp-color" :unit "°C"))))
 
 ;; Tokyo Weather Widget
 (defwidget tokyo_weather []
@@ -100,7 +100,7 @@
 (defwidget date_display []
   (box :class "date-widget" :orientation "v" :space-evenly false :spacing 4
     (label :class "date-weekday" :text date_weekday)
-    (box :class "date-main" :orientation "h" :space-evenly false :spacing 8
+    (box :class "date-main" :orientation "h" :space-evenly false :spacing 8 :halign "center"
       (label :class "date-month" :text date_month)
       (label :class "date-day" :text date_day))
     (label :class "date-year" :text date_year)
