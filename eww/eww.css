@@ -279,6 +279,9 @@
 
 /* ===== MEDIA PLAYER WIDGET ===== */
 .media-card {
+  border: none;
+  background: transparent;
+  padding: 12px;
 }
 
 .media-icon {
@@ -288,16 +291,9 @@
 }
 
 .media-status-icon {
-  font-size: 20px;
+  font-size: 18px;
   color: #00ff99;
-  margin-right: 16px;
-  text-shadow: 0 0 16px rgba(0, 255, 153, 0.8), 0 0 8px rgba(0, 255, 153, 0.6);
-}
-
-.media-content {
-  padding: 8px 8px 2px 8px;
-  border-top: none;
-  margin-top: 2px;
+  text-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
 }
 
 .media-cover {

@@ -58,32 +58,28 @@
 ;; Media Player Widget
 (defwidget media_player []
   (box :class "widget media-card"
-       :orientation "v"
+       :orientation "h"
        :space-evenly false
-       :spacing 8
+       :spacing 20
        :visible {music_status != "stopped"}
-    (box :class "widget-header" :orientation "h" :space-evenly false :valign "end"
-      (label :class "widget-icon media-icon" :text "" :valign "end")
-      (label :class "media-status-icon"
-             :text {music_status == "playing" ? "󰐊" : "󰏤"}
-             :valign "end")
-      (label :class "widget-title" :text "Now Playing" :xalign 0 :valign "end"))
-    (box :class "media-content" :orientation "h" :space-evenly false :spacing 12
-      (image :class "media-cover"
-             :path music_cover
-             :image-width 80
-             :image-height 80)
-      (box :orientation "v" :space-evenly false :spacing 6 :valign "center"
+    (image :class "media-cover"
+           :path music_cover
+           :image-width 80
+           :image-height 80)
+    (box :orientation "v" :space-evenly false :spacing 6 :valign "center"
+      (box :orientation "h" :space-evenly false :spacing 8
+        (label :class "media-status-icon"
+               :text {music_status == "playing" ? "󰐊" : "󰏤"})
         (label :class "media-title"
                :text {music_title}
                :xalign 0
-               :limit-width 30
-               :wrap false)
-        (label :class "media-artist"
-               :text {music_artist}
-               :xalign 0
-               :limit-width 30
-               :wrap false)))))
+               :limit-width 28
+               :wrap false))
+      (label :class "media-artist"
+             :text {music_artist}
+             :xalign 0
+             :limit-width 30
+             :wrap false))))
 
 ;; Main Dashboard
 (defwidget dashboard []
