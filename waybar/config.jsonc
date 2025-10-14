@@ -7,7 +7,7 @@
   "margin-right": 12,
   "modules-left": ["custom/arch"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["clock", "hyprland/language", "pulseaudio", "network", "battery", "custom/power"],
+  "modules-right": ["clock", "custom/language", "pulseaudio", "network", "battery", "custom/power"],
   "custom/arch": {
     "exec": "~/.config/eww/scripts/dashboard-status.sh",
     "return-type": "json",
@@ -66,9 +66,10 @@
     "tooltip": false,
     "on-click": "wlogout",
   },
-  "hyprland/language": {
+  "custom/language": {
+    "exec": "~/.config/waybar/scripts/fcitx5-status.sh",
+    "interval": "once",
+    "signal": 9,
     "format": "{}",
-    "format-en": "A",
-    "format-ja": "あ",
   },
 }

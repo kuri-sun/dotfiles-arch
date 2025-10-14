@@ -31,7 +31,8 @@ window#waybar.hidden {
 #network,
 #battery,
 #custom-power,
-#language {
+#language,
+#custom-language {
   padding: 0px 12px;
   margin: 0px 2px;
   color: #b9f6ca; /* Alacritty foreground */
@@ -60,15 +61,12 @@ window#waybar.hidden {
 
 /* --- Workspaces --- */
 #workspaces {
-  padding: 2px 6px;
-  margin: 0px 2px;
   background-color: transparent;
 }
 
 #workspaces button {
   all: unset;
-  margin: 0 4px;
-  padding: 6px 4px;
+  margin: 0 6px;
   font-family: "Cormorant", serif;
   font-size: 20px;
   font-weight: 500;
@@ -100,7 +98,8 @@ window#waybar.hidden {
 #battery:hover,
 #pulseaudio:hover,
 #custom-power:hover,
-#language:hover {
+#language:hover,
+#custom-language:hover {
   color: #00ff99;
   background-color: rgba(0, 255, 153, 0.18);
 }
