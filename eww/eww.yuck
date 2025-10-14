@@ -10,6 +10,43 @@
 (defpoll music_artist :interval "1s" "scripts/music.sh artist")
 (defpoll music_cover :interval "1s" "scripts/music.sh cover")
 
+;; System stats
+(defpoll cpu_usage :interval "2s" "scripts/system.sh cpu")
+(defpoll cpu_percent :interval "2s" "scripts/system.sh cpu_percent")
+(defpoll memory_usage :interval "2s" "scripts/system.sh memory")
+(defpoll cpu_temp :interval "3s" "scripts/system.sh temp")
+
+;; Storage
+(defpoll storage_percent :interval "30s" "scripts/storage.sh percent")
+
+;; Circular Stat Item (based on storage widget pattern)
+(defwidget circular_stat [icon value ?color]
+  (box :class "stat-item" :orientation "v" :space-evenly false :spacing 6
+    (box :class "stat-ring" :orientation "v" :valign "center" :halign "center"
+      (overlay
+        (circular-progress :value 100
+                          :class "stat-progress-bg"
+                          :thickness 9
+                          :start-at 75
+                          :clockwise true)
+        (circular-progress :value value
+                          :class "stat-progress ${color}"
+                          :thickness 9
+                          :start-at 75
+                          :clockwise true)
+        (box :class "stat-center" :orientation "v" :valign "center" :halign "center"
+          (label :class "stat-icon" :text icon))))
+    (label :class "stat-percent" :text "${round(value, 0)}%")))
+
+;; System Stats Widget with Circular Graphs
+(defwidget system_stats []
+  (box :class "widget system-stats-card" :orientation "v" :space-evenly false :spacing 10
+    (box :class "stats-grid" :orientation "h" :space-evenly true :spacing 16
+      (circular_stat :icon "󰻠" :value cpu_percent :color "cpu-color")
+      (circular_stat :icon "󰍛" :value memory_usage :color "memory-color")
+      (circular_stat :icon "󰋊" :value storage_percent :color "storage-color")
+      (circular_stat :icon "󰔏" :value cpu_temp :color "temp-color"))))
+
 ;; Tokyo Weather Widget
 (defwidget tokyo_weather []
   (box :class "widget weather-card" :orientation "v" :space-evenly false :spacing 10
@@ -33,12 +70,12 @@
        :space-evenly false
        :spacing 8
        :visible {music_status != "stopped"}
-    (box :class "widget-header" :orientation "h" :space-evenly false :valign 1.0
-      (label :class "widget-icon media-icon" :text "" :valign 1.0)
+    (box :class "widget-header" :orientation "h" :space-evenly false :valign "end"
+      (label :class "widget-icon media-icon" :text "" :valign "end")
       (label :class "media-status-icon"
              :text {music_status == "playing" ? "󰐊" : "󰏤"}
-             :valign 1.0)
-      (label :class "widget-title" :text "Now Playing" :xalign 0 :valign 1.0))
+             :valign "end")
+      (label :class "widget-title" :text "Now Playing" :xalign 0 :valign "end"))
     (box :class "media-content" :orientation "h" :space-evenly false :spacing 12
       (image :class "media-cover"
              :path music_cover
@@ -61,7 +98,8 @@
   (box :class "dashboard" :orientation "h" :space-evenly false :spacing 12
     (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
       (tokyo_weather)
-      (media_player))))
+      (media_player)
+      (system_stats))))
 
 ;; Main Window
 (defwindow dashboard_window

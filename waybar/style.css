@@ -20,10 +20,6 @@ window#waybar.hidden {
 
 /* --- Unified module style --- */
 #clock,
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
 #custom-media,
 #mode,
@@ -113,10 +109,6 @@ window#waybar.hidden {
 
 /* --- Hover Glow for all modules --- */
 #clock:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover,
-#temperature:hover,
 #network:hover,
 #battery:hover,
 #pulseaudio:hover,

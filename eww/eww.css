@@ -160,6 +160,70 @@
   margin-top: 4px;
 }
 
+/* ===== SYSTEM STATS WITH CIRCULAR GRAPHS ===== */
+.system-stats-card {
+  padding: 16px;
+  border: none;
+  background: transparent;
+}
+
+.stats-grid {
+  padding: 8px 0;
+}
+
+.stat-item {
+  min-width: 70px;
+}
+
+.stat-ring {
+  margin-bottom: 8px;
+  padding: 0;
+  min-width: 70px;
+  min-height: 70px;
+}
+
+.stat-progress-bg {
+  min-width: 70px;
+  min-height: 70px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.stat-progress {
+  min-width: 70px;
+  min-height: 70px;
+}
+
+.stat-progress.cpu-color {
+  color: #00ff99;
+}
+
+.stat-progress.memory-color {
+  color: #00ff99;
+}
+
+.stat-progress.storage-color {
+  color: #00ff99;
+}
+
+.stat-progress.temp-color {
+  color: #00ff99;
+}
+
+.stat-center {
+}
+
+.stat-icon {
+  font-size: 32px;
+  color: #b9f6ca;
+  text-shadow: 0 0 12px rgba(185, 246, 202, 0.4);
+}
+
+.stat-percent {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
 /* ===== STORAGE WIDGET ===== */
 .storage-card {
 }
