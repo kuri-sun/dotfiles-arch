@@ -10,20 +10,6 @@
 (defpoll music_artist :interval "1s" "scripts/music.sh artist")
 (defpoll music_cover :interval "1s" "scripts/music.sh cover")
 
-;; System stats
-(defpoll cpu_usage :interval "2s" "scripts/system.sh cpu")
-(defpoll cpu_percent :interval "2s" "scripts/system.sh cpu_percent")
-(defpoll cpu_text :interval "2s" "scripts/system.sh cpu_text")
-(defpoll memory_usage :interval "2s" "scripts/system.sh memory")
-(defpoll memory_text :interval "2s" "scripts/system.sh memory_text")
-(defpoll cpu_temp :interval "3s" "scripts/system.sh temp")
-
-;; Storage
-(defpoll storage_total :interval "30s" "scripts/storage.sh total")
-(defpoll storage_used :interval "30s" "scripts/storage.sh used")
-(defpoll storage_free :interval "30s" "scripts/storage.sh free")
-(defpoll storage_percent :interval "30s" "scripts/storage.sh percent")
-
 ;; Tokyo Weather Widget
 (defwidget tokyo_weather []
   (box :class "widget weather-card" :orientation "v" :space-evenly false :spacing 10
@@ -39,59 +25,6 @@
           (label :class "detail-label" :text "Humid" :xalign 0)
           (label :class "weather-temp-large" :text tokyo_humidity :xalign 0)))
       (label :class "weather-condition-text" :text tokyo_condition :xalign 0))))
-
-;; System Monitor Widget
-(defwidget system_monitor []
-  (box :class "widget system-card" :orientation "v" :space-evenly false :spacing 10
-    (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-title system-title" :text "System" :xalign 0))
-    (box :class "metrics-grid" :orientation "v" :space-evenly false :spacing 12
-      (box :class "metric-row" :orientation "h" :space-evenly false :spacing 12
-        (label :class "metric-icon-simple cpu" :text "")
-        (box :class "metric-info" :orientation "v" :space-evenly false :spacing 8
-          (box :orientation "h" :space-evenly false :spacing 20
-            (label :class "metric-label" :text "CPU" :xalign 0)
-            (label :class "metric-value" :text cpu_text))
-          (progress :class "metric-bar" :value cpu_usage)))
-      (box :class "metric-row" :orientation "h" :space-evenly false :spacing 12
-        (label :class "metric-icon-simple memory" :text "")
-        (box :class "metric-info" :orientation "v" :space-evenly false :spacing 8
-          (box :orientation "h" :space-evenly false :spacing 20
-            (label :class "metric-label" :text "Memory" :xalign 0)
-            (label :class "metric-value" :text memory_text))
-          (progress :class "metric-bar" :value memory_usage))))))
-
-;; Storage Widget
-(defwidget storage_info []
-  (box :class "widget storage-card" :orientation "v" :space-evenly false :spacing 8
-    (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-title storage-title" :text "Storage" :xalign 0))
-    (box :class "storage-visual" :orientation "v" :space-evenly false :spacing 6
-      (box :class "storage-ring" :orientation "v" :valign "center" :halign "center"
-        (overlay
-          (circular-progress :value 100
-                            :class "storage-progress-bg"
-                            :thickness 9
-                            :start-at 75
-                            :clockwise true)
-          (circular-progress :value storage_percent
-                            :class "storage-progress"
-                            :thickness 9
-                            :start-at 75
-                            :clockwise true)
-          (box :class "storage-center" :orientation "v" :valign "center" :halign "center" :spacing 0
-            (label :class "storage-percent-text" :text "${storage_percent}%")
-            (label :class "storage-label-small" :text "Used"))))
-      (box :class "storage-stats" :orientation "h" :space-evenly true :spacing 6
-        (box :orientation "v" :space-evenly false :spacing 1
-          (label :class "storage-stat-label" :text "Used")
-          (label :class "storage-stat-value" :text storage_used))
-        (box :orientation "v" :space-evenly false :spacing 1
-          (label :class "storage-stat-label" :text "Free")
-          (label :class "storage-stat-value" :text storage_free))
-        (box :orientation "v" :space-evenly false :spacing 1
-          (label :class "storage-stat-label" :text "Total")
-          (label :class "storage-stat-value" :text storage_total))))))
 
 ;; Media Player Widget
 (defwidget media_player []
@@ -128,16 +61,7 @@
   (box :class "dashboard" :orientation "h" :space-evenly false :spacing 12
     (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
       (tokyo_weather)
-      (media_player)
-      (system_monitor)
-      (storage_info))))
-
-;; Yoda Quote Widget
-(defwidget yoda_quote []
-  (box :class "yoda-quote-widget" :orientation "v" :space-evenly false
-    (label :class "yoda-quote-text" :text "Do. Or do not." :xalign 1)
-    (label :class "yoda-quote-text" :text "There is no try." :xalign 1)
-    (label :class "yoda-quote-author" :text "— Master Yoda" :xalign 1)))
+      (media_player))))
 
 ;; Main Window
 (defwindow dashboard_window
@@ -150,15 +74,3 @@
   :windowtype "dock"
   :wm-ignore false
   (dashboard))
-
-;; Yoda Quote Window
-(defwindow yoda_window
-  :monitor 0
-  :geometry (geometry :x "60px"
-                      :y "60px"
-                      :width "400px"
-                      :anchor "bottom right")
-  :stacking "bg"
-  :windowtype "dock"
-  :wm-ignore false
-  (yoda_quote))
