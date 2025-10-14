@@ -35,9 +35,9 @@ window#waybar.hidden {
 #custom-language {
   padding: 0px 12px;
   margin: 0px 2px;
-  color: #b9f6ca; /* Alacritty foreground */
+  color: #00ff99;
   border-radius: 6px;
-  background-color: rgba(0, 255, 153, 0.08); /* subtle glow like cursor */
+  background-color: rgba(0, 255, 153, 0.18);
   font-weight: 600;
   font-size: 16px;
   min-width: 20px;
@@ -93,17 +93,6 @@ window#waybar.hidden {
   text-shadow: 0 0 8px rgba(0, 255, 153, 0.4);
 }
 
-/* --- Hover Glow for all modules --- */
-#clock:hover,
-#network:hover,
-#battery:hover,
-#pulseaudio:hover,
-#custom-power:hover,
-#language:hover,
-#custom-language:hover {
-  color: #00ff99;
-  background-color: rgba(0, 255, 153, 0.18);
-}
 
 #custom-arch:hover {
   color: #00ff99;
@@ -116,25 +105,15 @@ window#waybar.hidden {
 }
 
 /* --- Network --- */
-#network {
-  background-color: rgba(0, 255, 153, 0.08);
-  color: #b9f6ca;
-}
-
 #network.disconnected {
   background-color: rgba(255, 77, 77, 0.3); /* Alacritty red #ff4d4d */
   color: #ffffff;
 }
 
 /* --- Battery --- */
-#battery {
-  background-color: rgba(0, 255, 153, 0.08);
-  color: #b9f6ca;
-}
-
 #battery.charging {
-  background-color: rgba(0, 255, 153, 0.15);
-  color: #b9f6ca;
+  background-color: rgba(0, 255, 153, 0.25);
+  color: #00ff99;
 }
 
 #battery.critical:not(.charging) {
