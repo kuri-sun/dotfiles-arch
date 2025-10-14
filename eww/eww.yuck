@@ -49,19 +49,11 @@
 
 ;; Tokyo Weather Widget
 (defwidget tokyo_weather []
-  (box :class "widget weather-card" :orientation "v" :space-evenly false :spacing 10
-    (box :class "widget-header" :orientation "h" :space-evenly false
-      (label :class "widget-icon tokyo-icon" :text tokyo_icon)
-      (label :class "widget-title tokyo-title" :text "Tokyo" :xalign 0))
-    (box :class "weather-main" :orientation "v" :space-evenly false :spacing 6
-      (box :orientation "h" :space-evenly false :spacing 20 :valign "center"
-        (box :orientation "v" :space-evenly false :spacing 2
-          (label :class "detail-label" :text "Temp" :xalign 0)
-          (label :class "weather-temp-large" :text "${tokyo_temp}°" :xalign 0))
-        (box :orientation "v" :space-evenly false :spacing 2
-          (label :class "detail-label" :text "Humid" :xalign 0)
-          (label :class "weather-temp-large" :text tokyo_humidity :xalign 0)))
-      (label :class "weather-condition-text" :text tokyo_condition :xalign 0))))
+  (box :class "widget weather-card" :orientation "h" :space-evenly false :spacing 16 :valign "center"
+    (label :class "weather-icon" :text tokyo_icon)
+    (box :orientation "v" :space-evenly false :spacing 4
+      (label :class "weather-temp" :text "${tokyo_temp}°" :xalign 0)
+      (label :class "weather-condition" :text tokyo_condition :xalign 0))))
 
 ;; Media Player Widget
 (defwidget media_player []
