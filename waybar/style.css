@@ -115,6 +115,7 @@ window#waybar.hidden {
 #clock:hover,
 #cpu:hover,
 #memory:hover,
+#disk:hover,
 #temperature:hover,
 #network:hover,
 #battery:hover,
