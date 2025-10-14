@@ -7,7 +7,7 @@
   "margin-right": 12,
   "modules-left": ["custom/music"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/arch", "custom/language", "pulseaudio", "network", "battery", "custom/power"],
+  "modules-right": ["custom/language", "pulseaudio", "network", "battery", "custom/power"],
   "custom/arch": {
     "exec": "~/.config/eww/scripts/dashboard-status.sh",
     "return-type": "json",
