@@ -48,7 +48,7 @@
 ;; System Stats Widget with Circular Graphs
 (defwidget system_stats []
   (box :class "widget system-stats-card" :orientation "v" :space-evenly false :spacing 10
-    (box :class "stats-grid" :orientation "h" :space-evenly true :spacing 16
+    (box :class "stats-grid" :orientation "h" :space-evenly false :spacing 18 :halign "start"
       (circular_stat :icon "󰻠" :value cpu_percent :color "cpu-color")
       (circular_stat :icon "󰍛" :value memory_usage :color "memory-color")
       (circular_stat :icon "󰋊" :value storage_percent :color "storage-color")
@@ -59,6 +59,7 @@
   (box :class "widget weather-card" :orientation "h" :space-evenly false :spacing 16 :valign "center"
     (label :class "weather-icon" :text tokyo_icon)
     (box :orientation "v" :space-evenly false :spacing 4
+      (label :class "weather-location" :text "Tokyo" :xalign 0)
       (label :class "weather-temp" :text "${tokyo_temp}°" :xalign 0)
       (label :class "weather-condition" :text tokyo_condition :xalign 0))))
 

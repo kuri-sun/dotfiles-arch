@@ -66,6 +66,14 @@
   text-shadow: 0 0 16px rgba(0, 255, 153, 0.4);
 }
 
+.weather-location {
+  font-size: 18px;
+  font-weight: 600;
+  color: #00ff99;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
 .weather-temp {
   font-size: 38px;
   font-weight: 700;
