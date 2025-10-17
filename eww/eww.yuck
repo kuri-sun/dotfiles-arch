@@ -99,12 +99,12 @@
 ;; Date Widget
 (defwidget date_display []
   (box :class "date-widget" :orientation "v" :space-evenly false :spacing 4
-    (label :class "date-weekday" :text date_weekday)
+    (label :class "date-weekday" :text date_weekday :xalign 0.5)
     (box :class "date-main" :orientation "h" :space-evenly false :spacing 8 :halign "center"
       (label :class "date-month" :text date_month)
       (label :class "date-day" :text date_day))
-    (label :class "date-year" :text date_year)
-    (label :class "date-time" :text date_time)))
+    (label :class "date-year" :text date_year :xalign 0.5)
+    (label :class "date-time" :text date_time :xalign 0.5)))
 
 ;; Main Window
 (defwindow dashboard_window
