@@ -37,7 +37,7 @@ button {
 button:focus,
 button:active,
 button:hover {
-  background-color: rgba(0, 255, 153, 0.15);
+  background-color: rgba(40, 40, 40, 0.9);
   border: 2px solid #00ff99;
   outline-style: none;
   box-shadow:
