@@ -427,8 +427,11 @@
   color: #b9f6ca;
   background-color: transparent;
   font-weight: 500;
-  font-size: 17px;
   transition: all 0.2s ease;
+}
+
+.bar-module label {
+  font-size: 20px;
 }
 
 .bar-module:hover {
@@ -445,14 +448,17 @@
 }
 
 .bar-power {
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .bar-power button {
   all: unset;
   color: #b9f6ca;
-  font-size: 19px;
   transition: all 0.2s ease;
+}
+
+.bar-power button label {
+  font-size: 20px;
 }
 
 .bar-power button:hover {
