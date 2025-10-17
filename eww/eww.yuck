@@ -19,6 +19,15 @@
 ;; Storage
 (defpoll storage_percent :interval "30s" "scripts/storage.sh percent")
 
+;; Audio & Brightness & Battery
+(defpoll audio_volume :interval "1s" "scripts/audio.sh volume")
+(defpoll audio_icon :interval "1s" "scripts/audio.sh icon")
+(defpoll brightness_percent :interval "1s" "scripts/brightness.sh percent")
+(defpoll brightness_icon :interval "1s" "scripts/brightness.sh icon")
+(defpoll battery_percent :interval "5s" "scripts/battery.sh percent")
+(defpoll battery_icon :interval "5s" "scripts/battery.sh icon")
+(defpoll battery_status :interval "5s" "scripts/battery.sh status")
+
 ;; Date
 (defpoll date_day :interval "10s" "date '+%d'")
 (defpoll date_month :interval "10s" "date '+%b' | tr '[:lower:]' '[:upper:]'")
@@ -63,6 +72,33 @@
       (circular_stat :icon "󰍛" :value memory_usage :color "memory-color")
       (circular_stat :icon "󰋊" :value storage_percent :color "storage-color")
       (circular_stat :icon "󰔏" :value cpu_temp :color "temp-color" :unit "°C"))))
+
+;; Controls Widget (Audio, Brightness & Battery)
+(defwidget controls []
+  (box :class "widget controls-card" :orientation "v" :space-evenly false :spacing 24
+    ;; Audio
+    (box :class "control-item" :orientation "h" :space-evenly false :spacing 12
+      (label :class "control-icon audio-icon" :text audio_icon)
+      (box :class "control-bar-container" :orientation "v" :valign "center"
+        (progress :class "control-bar"
+                  :value audio_volume))
+      (label :class "control-value" :text "${audio_volume}%"))
+
+    ;; Brightness
+    (box :class "control-item" :orientation "h" :space-evenly false :spacing 12
+      (label :class "control-icon" :text brightness_icon)
+      (box :class "control-bar-container" :orientation "v" :valign "center"
+        (progress :class "control-bar"
+                  :value brightness_percent))
+      (label :class "control-value" :text "${brightness_percent}%"))
+
+    ;; Battery
+    (box :class "control-item" :orientation "h" :space-evenly false :spacing 12
+      (label :class "control-icon" :text battery_icon)
+      (box :class "control-bar-container" :orientation "v" :valign "center"
+        (progress :class "control-bar"
+                  :value battery_percent))
+      (label :class "control-value" :text "${battery_percent}%"))))
 
 ;; Quick Launcher Widget
 (defwidget quick_launcher []
@@ -116,7 +152,8 @@
     (box :orientation "v" :space-evenly false :spacing 18 :style "min-width: 320px;"
       (tokyo_weather)
       (media_player)
-      (system_stats))))
+      (system_stats)
+      (controls))))
 
 ;; Date Widget with Calendar
 (defwidget date_display []

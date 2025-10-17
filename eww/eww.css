@@ -223,6 +223,53 @@
   color: #ffffff;
 }
 
+/* ===== CONTROLS WIDGET (AUDIO & BRIGHTNESS) ===== */
+.controls-card {
+  padding: 16px;
+  border: none;
+  background: transparent;
+}
+
+.control-item {
+  padding: 4px 0;
+}
+
+.control-icon {
+  font-size: 24px;
+  color: #b9f6ca;
+  min-width: 32px;
+}
+
+.control-icon.audio-icon {
+  font-size: 28px;
+}
+
+.control-bar-container {
+  min-width: 240px;
+}
+
+.control-bar trough {
+  all: unset;
+  min-height: 12px;
+  min-width: 240px;
+  border-radius: 12px;
+  background-color: rgba(0, 255, 153, 0.15);
+}
+
+.control-bar trough progress {
+  all: unset;
+  min-height: 12px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00ff99, #66ffb2);
+}
+
+.control-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 45px;
+}
+
 /* ===== QUICK LAUNCHER WIDGET ===== */
 .launcher-card {
   padding: 16px;
