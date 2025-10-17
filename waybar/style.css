@@ -25,13 +25,22 @@ window#waybar {
   border-radius: 6px;
   background-color: transparent;
   font-weight: 600;
+}
+
+#clock {
   font-size: 18px;
-  min-width: 20px;
+}
+
+#pulseaudio,
+#network,
+#battery,
+#custom-power {
+  font-size: 20px;
 }
 
 /* --- Custom Power module --- */
 #custom-power {
-  font-size: 20px; /* Larger icon */
+  font-size: 22px; /* Larger icon */
 }
 
 /* --- Workspaces (Dot Style) --- */
