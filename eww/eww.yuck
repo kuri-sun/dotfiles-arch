@@ -26,6 +26,20 @@
 (defpoll date_weekday :interval "10s" "date '+%A' | tr '[:lower:]' '[:upper:]'")
 (defpoll date_time :interval "1s" "date '+%I:%M %p'")
 
+;; Bar modules
+(defpoll bar_time :interval "1s" "date '+%B %d  %I:%M %p'")
+(defpoll battery_icon :interval "10s" "scripts/battery.sh icon")
+(defpoll battery_percent :interval "10s" "scripts/battery.sh percent")
+(defpoll battery_status :interval "10s" "scripts/battery.sh status")
+(defpoll audio_icon :interval "3s" "scripts/audio.sh icon")
+(defpoll audio_volume :interval "3s" "scripts/audio.sh volume")
+(defpoll network_icon :interval "5s" "scripts/network-status.sh icon")
+(defpoll network_type :interval "5s" "scripts/network-status.sh type")
+(defpoll language_status :interval "3s" "~/.config/waybar/scripts/fcitx5-status.sh")
+
+;; Hyprland workspaces - track active workspace
+(defpoll active_workspace :interval "500ms" "hyprctl activeworkspace -j | jq -r '.id'")
+
 ;; Circular Stat Item (based on storage widget pattern)
 (defwidget circular_stat [icon value ?color ?unit]
   (box :class "stat-item" :orientation "v" :space-evenly false :spacing 6
@@ -96,6 +110,63 @@
       (media_player)
       (system_stats))))
 
+;; ============ BAR WIDGETS ============
+
+;; Clock Widget
+(defwidget bar_clock []
+  (box :class "bar-module bar-clock"
+    (label :text bar_time)))
+
+;; Workspaces Widget
+(defwidget bar_workspaces []
+  (box :class "bar-workspaces" :spacing 8 :valign "center" :space-evenly false
+    (for workspace in "[1,2,3,4,5,6,7,8,9]"
+      (button :class "workspace-btn ${workspace == active_workspace || '${workspace}' == active_workspace ? 'active' : ''}"
+              :onclick "hyprctl dispatch workspace ${workspace}"
+        (box :class "workspace-dot ${workspace == active_workspace || '${workspace}' == active_workspace ? 'active-dot' : ''}")))))
+
+;; Language Widget
+(defwidget bar_language []
+  (box :class "bar-module bar-language"
+    (label :text language_status)))
+
+;; Audio Widget
+(defwidget bar_audio []
+  (box :class "bar-module bar-audio"
+       :tooltip "${audio_volume}%"
+    (label :text audio_icon)))
+
+;; Network Widget
+(defwidget bar_network []
+  (box :class "bar-module bar-network ${network_type == 'disconnected' ? 'disconnected' : ''}"
+       :tooltip network_type
+    (label :text network_icon)))
+
+;; Battery Widget
+(defwidget bar_battery []
+  (box :class "bar-module bar-battery ${battery_status == 'Charging' ? 'charging' : battery_percent < 15 ? 'critical' : ''}"
+       :tooltip "${battery_percent}% - ${battery_status}"
+    (label :text battery_icon)))
+
+;; Power Button Widget
+(defwidget bar_power []
+  (box :class "bar-module bar-power"
+    (button :onclick "wlogout"
+      (label :text "⏻"))))
+
+;; Main Bar
+(defwidget bar []
+  (centerbox :class "bar" :orientation "h"
+    (box :class "bar-left" :halign "start" :spacing 4 :space-evenly false
+      (bar_clock))
+    (box :class "bar-center" :halign "center" :spacing 4 :space-evenly false
+      (bar_workspaces))
+    (box :class "bar-right" :halign "end" :spacing 4 :space-evenly false
+      (bar_audio)
+      (bar_network)
+      (bar_battery)
+      (bar_power))))
+
 ;; Date Widget
 (defwidget date_display []
   (box :class "date-widget" :orientation "v" :space-evenly false :spacing 4
@@ -128,3 +199,17 @@
   :windowtype "dock"
   :wm-ignore false
   (date_display))
+
+;; Bar Window
+(defwindow bar_window
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "40px"
+                      :anchor "top center")
+  :stacking "fg"
+  :exclusive true
+  :windowtype "dock"
+  :wm-ignore false
+  (bar))

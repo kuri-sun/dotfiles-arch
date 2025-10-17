@@ -398,3 +398,125 @@
   margin-top: 12px;
   letter-spacing: 1px;
 }
+
+/* ===== BAR STYLES ===== */
+.bar {
+  background-color: transparent;
+  padding: 2px 16px 0px 16px;
+}
+
+.bar-left, .bar-center, .bar-right {
+  padding: 0 8px;
+}
+
+.bar-left {
+  border-right: 1px solid rgba(185, 246, 202, 0.15);
+  padding-right: 20px;
+  margin-right: 12px;
+}
+
+.bar-right {
+  border-left: 1px solid rgba(185, 246, 202, 0.15);
+  padding-left: 20px;
+  margin-left: 12px;
+}
+
+.bar-module {
+  padding: 0px 10px;
+  margin: 0px 4px;
+  color: #b9f6ca;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+
+.bar-module:hover {
+  color: #00ff99;
+  text-shadow: 0 0 8px rgba(0, 255, 153, 0.4);
+}
+
+.bar-clock {
+  color: #b9f6ca;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+}
+
+.bar-power {
+  font-size: 19px;
+}
+
+.bar-power button {
+  all: unset;
+  color: #b9f6ca;
+  font-size: 19px;
+  transition: all 0.2s ease;
+}
+
+.bar-power button:hover {
+  color: #00ff99;
+  text-shadow: 0 0 12px rgba(0, 255, 153, 0.5);
+}
+
+/* Workspaces */
+.bar-workspaces {
+  background-color: transparent;
+}
+
+.workspace-btn {
+  all: unset;
+  padding: 0;
+  margin: 0;
+}
+
+.workspace-dot {
+  min-width: 10px;
+  min-height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(185, 246, 202, 0.3);
+  transition: all 0.25s ease;
+}
+
+.workspace-btn:hover .workspace-dot {
+  background-color: rgba(185, 246, 202, 0.65);
+}
+
+.workspace-dot.active-dot {
+  min-width: 28px;
+  min-height: 10px;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #00ff99;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.4);
+}
+
+/* Network states */
+.bar-network.disconnected {
+  color: #ff6b6b;
+}
+
+/* Battery states */
+.bar-battery.charging {
+  color: #00ff99;
+  text-shadow: 0 0 8px rgba(0, 255, 153, 0.3);
+}
+
+.bar-battery.critical {
+  color: #ff6b6b;
+  animation: blink 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
