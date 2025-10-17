@@ -61,19 +61,19 @@
 }
 
 .weather-icon {
-  font-size: 48px;
+  font-size: 56px;
   color: #00ff99;
   text-shadow: 0 0 16px rgba(0, 255, 153, 0.4);
 }
 
 .weather-temp {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 700;
   color: #ffffff;
 }
 
 .weather-condition {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
 }
@@ -291,7 +291,7 @@
 }
 
 .media-status-icon {
-  font-size: 18px;
+  font-size: 22px;
   color: #00ff99;
   text-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
 }
@@ -305,7 +305,7 @@
 }
 
 .media-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: #b9f6ca;
   text-shadow: 0 0 8px rgba(185, 246, 202, 0.3);
@@ -313,7 +313,7 @@
 }
 
 .media-artist {
-  font-size: 13px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
   letter-spacing: 0.3px;

@@ -91,7 +91,7 @@
 ;; Main Dashboard
 (defwidget dashboard []
   (box :class "dashboard" :orientation "h" :space-evenly false :spacing 12
-    (box :orientation "v" :space-evenly false :spacing 12 :style "min-width: 320px;"
+    (box :orientation "v" :space-evenly false :spacing 18 :style "min-width: 320px;"
       (tokyo_weather)
       (media_player)
       (system_stats))))
