@@ -1,0 +1,71 @@
+/* Yoda Theme for wlogout - Horizontal Layout */
+
+* {
+  background-image: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+}
+
+window {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+}
+
+window > box {
+  background-color: rgba(20, 20, 20, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid rgba(0, 180, 90, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+button {
+  color: #ffffff;
+  background-color: rgba(40, 40, 40, 0.9);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 35%;
+  margin: 120px 0px;
+  min-width: 180px;
+  min-height: 180px;
+  padding: 0px 0px 16px 0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-color: rgba(0, 255, 153, 0.15);
+  border: 2px solid #00ff99;
+  outline-style: none;
+  box-shadow:
+    0 4px 20px rgba(0, 255, 153, 0.4),
+    0 0 30px rgba(0, 255, 153, 0.2);
+  color: #00ff99;
+}
+
+#lock {
+  background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+  background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+  background-image: image(url("/usr/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+  background-image: image(url("/usr/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+  background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+  background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+}

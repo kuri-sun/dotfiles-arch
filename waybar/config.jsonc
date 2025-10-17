@@ -57,7 +57,7 @@
   "custom/power": {
     "format": "⏻",
     "tooltip": false,
-    "on-click": "wlogout",
+    "on-click": "~/.config/wlogout/wlogout.sh",
   },
   "custom/music": {
     "exec": "~/.config/waybar/scripts/music.sh",
