@@ -1,7 +1,6 @@
 /* --- Global --- */
 * {
   font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
   transition: all 0.3s ease;
 }
 
@@ -20,13 +19,13 @@ window#waybar {
 #network,
 #battery,
 #custom-power {
-  padding: 0px 12px;
+  padding: 0px 8px;
   margin: 0;
   color: #b9f6ca;
   border-radius: 6px;
   background-color: transparent;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   min-width: 20px;
 }
 
@@ -40,11 +39,13 @@ window#waybar {
   background-color: transparent;
   margin: 0;
   padding: 0;
+  font-size: 10px;
 }
 
 #workspaces button {
-  padding: 0px 2.5px;
-  margin: 12px 6px;
+  padding: 0px 2px;
+  margin: 12px 5px;
+  min-width: 10px;
   min-height: 4px;
   border: none;
   border-radius: 50%;
@@ -60,6 +61,7 @@ window#waybar {
   min-width: 32px;
   border-radius: 25px;
   background-color: #00ff99;
+  background-color: rgba(185, 246, 202, 1);
 }
 
 #workspaces button:hover {

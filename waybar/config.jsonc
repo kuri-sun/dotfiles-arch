@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
   "height": 24,
-  "spacing": 2,
+  "spacing": 4,
   "margin-top": 8,
   "margin-left": 16,
   "margin-right": 20,
