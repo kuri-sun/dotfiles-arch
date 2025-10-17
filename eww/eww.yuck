@@ -26,6 +26,16 @@
 (defpoll date_weekday :interval "10s" "date '+%A' | tr '[:lower:]' '[:upper:]'")
 (defpoll date_time :interval "1s" "date '+%I:%M %p'")
 
+;; Calendar
+(defpoll calendar_year :interval "1h" "scripts/calendar.sh year")
+(defpoll calendar_month :interval "1h" "scripts/calendar.sh month")
+(defpoll calendar_week0 :interval "1h" "scripts/calendar.sh week0")
+(defpoll calendar_week1 :interval "1h" "scripts/calendar.sh week1")
+(defpoll calendar_week2 :interval "1h" "scripts/calendar.sh week2")
+(defpoll calendar_week3 :interval "1h" "scripts/calendar.sh week3")
+(defpoll calendar_week4 :interval "1h" "scripts/calendar.sh week4")
+(defpoll calendar_week5 :interval "1h" "scripts/calendar.sh week5")
+
 ;; Circular Stat Item (based on storage widget pattern)
 (defwidget circular_stat [icon value ?color ?unit]
   (box :class "stat-item" :orientation "v" :space-evenly false :spacing 6
@@ -108,15 +118,49 @@
       (media_player)
       (system_stats))))
 
-;; Date Widget
+;; Date Widget with Calendar
 (defwidget date_display []
-  (box :class "date-widget" :orientation "v" :space-evenly false :spacing 4
-    (label :class "date-weekday" :text date_weekday :xalign 0.5)
-    (box :class "date-main" :orientation "h" :space-evenly false :spacing 8 :halign "center"
-      (label :class "date-month" :text date_month)
-      (label :class "date-day" :text date_day))
-    (label :class "date-year" :text date_year :xalign 0.5)
-    (label :class "date-time" :text date_time :xalign 0.5)))
+  (box :orientation "v" :space-evenly false :spacing 8
+    (box :class "date-widget" :orientation "v" :space-evenly false :spacing 0
+      (label :class "date-weekday" :text date_weekday :xalign 0.5)
+      (box :class "date-main" :orientation "h" :space-evenly false :spacing 8 :halign "center"
+        (label :class "date-month" :text date_month)
+        (label :class "date-day" :text date_day))
+      (label :class "date-year" :text date_year :xalign 0.5))
+    (month_calendar)))
+
+;; Calendar day helper widget
+(defwidget calendar_day [day current]
+  (label :class "calendar-day ${current == 'true' ? 'current-day' : ''} ${day == '' ? 'empty-day' : ''}"
+         :text day))
+
+;; Calendar week row helper widget
+(defwidget calendar_week_row [week_data]
+  (box :class "calendar-week" :orientation "h" :space-evenly true
+    (for day in week_data
+      (calendar_day :day {day.day} :current {day.current}))))
+
+;; Calendar Widget
+(defwidget month_calendar []
+  (box :class "calendar-widget" :orientation "v" :space-evenly false :spacing 12
+    ;; Day Names Header
+    (box :class "calendar-days-header" :orientation "h" :space-evenly true
+      (label :class "calendar-day-name" :text "S")
+      (label :class "calendar-day-name" :text "M")
+      (label :class "calendar-day-name" :text "T")
+      (label :class "calendar-day-name" :text "W")
+      (label :class "calendar-day-name" :text "T")
+      (label :class "calendar-day-name" :text "F")
+      (label :class "calendar-day-name" :text "S"))
+
+    ;; Calendar Grid
+    (box :class "calendar-grid" :orientation "v" :space-evenly false
+      (calendar_week_row :week_data calendar_week0)
+      (calendar_week_row :week_data calendar_week1)
+      (calendar_week_row :week_data calendar_week2)
+      (calendar_week_row :week_data calendar_week3)
+      (calendar_week_row :week_data calendar_week4)
+      (calendar_week_row :week_data calendar_week5))))
 
 ;; Main Window
 (defwindow dashboard_window
