@@ -550,7 +550,6 @@
   background: #00ff99;
   color: #050705;
   font-weight: 700;
-  box-shadow: 0 0 12px rgba(0, 255, 153, 0.5);
 }
 
 .calendar-day.empty-day {
