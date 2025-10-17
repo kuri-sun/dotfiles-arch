@@ -3,6 +3,7 @@ alsa-firmware
 alsa-utils
 base
 base-devel
+blender
 brightnessctl
 dosfstools
 efibootmgr
@@ -25,6 +26,7 @@ gvfs-mtp
 gvfs-smb
 htop
 hyprland
+hyprlock
 hyprpaper
 intel-media-driver
 jq
@@ -56,13 +58,14 @@ reflector
 ripgrep
 sassc
 slurp
+socat
 sof-firmware
 sudo
 swayidle
-swaylock
 thunar
 thunar-volman
 tmux
+ttf-cormorant
 ttf-jetbrains-mono
 ttf-nerd-fonts-symbols
 tumbler
@@ -70,7 +73,6 @@ ufw
 unzip
 vim
 waybar
-wf-recorder
 wget
 wireplumber
 wl-clipboard

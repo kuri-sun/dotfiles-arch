@@ -13,7 +13,9 @@
 - **Status Bar:** Waybar
 - **Widgets:** Eww (Elkowar's Wacky Widgets)
 - **Launcher:** Wofi
-- **Session Manager:** Swaylock + Swayidle
+- **Session Lock:** Hyprlock
+- **Idle Manager:** Swayidle
+- **Logout Menu:** Wlogout
 - **Notifications:** Mako
 - **Terminal:** Alacritty
 - **File Manager:** Thunar
@@ -36,15 +38,19 @@ bash ~/.config/scripts/install-master.sh
 
 **Core Hyprland & Wayland:**
 
-> hyprland, hyprpaper, swayidle, swaylock, wl-clipboard, waybar, eww, wofi, mako
+> hyprland, hyprpaper, hyprlock, swayidle, wlogout, wl-clipboard, waybar, eww, wofi, mako
 
 **Screen Capture & Recording:**
 
 > grim, slurp, obs-studio, obs-cli, mpv
 
+**Graphics & 3D:**
+
+> blender
+
 **Terminal & Development:**
 
-> alacritty, neovim, tmux, zsh, git, lazygit, htop, nodejs, npm, python-pip, go
+> alacritty, neovim, vim, tmux, zsh, git, lazygit, htop, less, nodejs, npm, python-pip, python-pydbus, go, sassc
 
 **File Management:**
 
@@ -52,11 +58,11 @@ bash ~/.config/scripts/install-master.sh
 
 **Audio:**
 
-> pipewire, pipewire-alsa, pipewire-pulse, wireplumber, pavucontrol, pamixer, mpd, mpc
+> pipewire, pipewire-alsa, pipewire-pulse, wireplumber, pavucontrol, pamixer, mpd, mpc, alsa-utils, alsa-firmware, sof-firmware
 
 **Fonts:**
 
-> ttf-jetbrains-mono, ttf-nerd-fonts-symbols, noto-fonts, noto-fonts-cjk, noto-fonts-emoji
+> ttf-jetbrains-mono, ttf-cormorant, ttf-nerd-fonts-symbols, noto-fonts, noto-fonts-cjk, noto-fonts-emoji
 
 **Input Method (Japanese):**
 
@@ -64,11 +70,11 @@ bash ~/.config/scripts/install-master.sh
 
 **Utilities:**
 
-> brightnessctl, fastfetch, fzf, fd, ripgrep, unzip, wget, reflector
+> brightnessctl, fastfetch, fzf, fd, ripgrep, jq, socat, unzip, wget, reflector
 
 **System:**
 
-> base, base-devel, linux, linux-firmware, grub, efibootmgr, networkmanager, ufw, gufw, intel-media-driver
+> base, base-devel, linux, linux-firmware, grub, efibootmgr, dosfstools, networkmanager, ufw, gufw, sudo, intel-media-driver, libva-utils
 
 </details>
 
