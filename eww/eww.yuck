@@ -54,6 +54,17 @@
       (circular_stat :icon "󰋊" :value storage_percent :color "storage-color")
       (circular_stat :icon "󰔏" :value cpu_temp :color "temp-color" :unit "°C"))))
 
+;; Quick Launcher Widget
+(defwidget quick_launcher []
+  (box :class "widget launcher-card" :orientation "v" :space-evenly false :spacing 8
+    (box :class "launcher-grid" :orientation "h" :halign "start" :space-evenly false :spacing 12
+      (button :class "launcher-btn" :onclick "blender &"
+        (label :class "launcher-icon" :text "󰂫"))
+      (button :class "launcher-btn" :onclick "google-chrome-stable &"
+        (label :class "launcher-icon" :text "󰊯"))
+      (button :class "launcher-btn" :onclick "thunar &"
+        (label :class "launcher-icon" :text "󰉋")))))
+
 ;; Tokyo Weather Widget
 (defwidget tokyo_weather []
   (box :class "widget weather-card" :orientation "h" :space-evenly false :spacing 16 :valign "center"

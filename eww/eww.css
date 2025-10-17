@@ -223,6 +223,41 @@
   color: #ffffff;
 }
 
+/* ===== QUICK LAUNCHER WIDGET ===== */
+.launcher-card {
+  padding: 16px;
+  border: none;
+  background: transparent;
+}
+
+.launcher-grid {
+  padding: 8px 0;
+}
+
+.launcher-btn {
+  all: unset;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 16px;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.launcher-btn:hover {
+  background: rgba(0, 255, 153, 0.1);
+}
+
+.launcher-btn:active {
+  background: rgba(0, 255, 153, 0.15);
+}
+
+.launcher-icon {
+  font-size: 36px;
+  color: #00ff99;
+  text-shadow: 0 0 12px rgba(0, 255, 153, 0.4);
+}
+
 /* ===== STORAGE WIDGET ===== */
 .storage-card {
 }
