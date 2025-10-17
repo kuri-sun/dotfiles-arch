@@ -351,12 +351,9 @@
 
 /* ===== DATE WIDGET ===== */
 .date-widget {
-  background: rgba(5, 7, 5, 0.95);
+  background: transparent;
   border-radius: 20px;
   padding: 28px 40px;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.7),
-    0 0 40px rgba(0, 255, 153, 0.2);
   min-width: 240px;
 }
 
@@ -376,9 +373,6 @@
   font-size: 42px;
   font-weight: 700;
   color: #00ff99;
-  text-shadow:
-    0 0 20px rgba(0, 255, 153, 0.6),
-    0 0 10px rgba(0, 255, 153, 0.4);
 }
 
 .date-day {
