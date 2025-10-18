@@ -70,7 +70,7 @@ bash ~/.config/scripts/install-master.sh
 
 **Utilities:**
 
-> brightnessctl, fastfetch, fzf, fd, ripgrep, jq, socat, unzip, wget, reflector
+> brightnessctl, neofetch, fzf, fd, ripgrep, jq, socat, unzip, wget, reflector
 
 **System:**
 
