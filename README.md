@@ -2,9 +2,9 @@
 
 ![desktop preview](assets/default.png)
 
-![hyprland preview](assets/wofi.png)
-
 ![hyprland_with_code preview](assets/code.png)
+
+![hyprland_logout preview](assets/logout.png)
 
 ## Info
 
