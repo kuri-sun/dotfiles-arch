@@ -74,7 +74,7 @@ bash ~/.config/scripts/install-master.sh
 
 **System:**
 
-> base, base-devel, linux, linux-firmware, grub, efibootmgr, dosfstools, networkmanager, ufw, gufw, sudo, intel-media-driver, libva-utils
+> base, base-devel, linux, linux-firmware, grub, efibootmgr, dosfstools, networkmanager, network-manager-applet, ufw, gufw, sudo, intel-media-driver, libva-utils
 
 </details>
 

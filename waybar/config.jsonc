@@ -44,7 +44,7 @@
     "tooltip-format": "{essid}\n{ifname}: {ipaddr}/{cidr}",
     "format-linked": " No IP",
     "format-disconnected": "󰤭",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor",
   },
   "pulseaudio": {
     "backend": "pipewire",
