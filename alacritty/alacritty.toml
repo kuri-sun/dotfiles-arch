@@ -7,7 +7,7 @@
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 0.60
+opacity = 1.0
 blur = true
 decorations = "none"
 dynamic_padding = true
