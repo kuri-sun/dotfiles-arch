@@ -41,6 +41,24 @@ multiplier = 3
 [mouse]
 hide_when_typing = true
 
+[[mouse.bindings]]
+mouse = 4
+action = "ScrollLineUp"
+
+[[mouse.bindings]]
+mouse = 5
+action = "ScrollLineDown"
+
+[[mouse.bindings]]
+mouse = 4
+mods = "Shift"
+action = "ScrollPageUp"
+
+[[mouse.bindings]]
+mouse = 5
+mods = "Shift"
+action = "ScrollPageDown"
+
 [window.class]
 general = "Alacritty"
 instance = "alacritty"
@@ -101,13 +119,14 @@ background = "#050705"
 bindings = [
   { key = "V", mods = "Control", action = "Paste" },
   { key = "C", mods = "Control", action = "Copy" },
-  # Scrolling keybindings
-  { key = "PageUp", mods = "Shift", action = "ScrollPageUp" },
-  { key = "PageDown", mods = "Shift", action = "ScrollPageDown" },
-  { key = "Home", mods = "Shift", action = "ScrollToTop" },
-  { key = "End", mods = "Shift", action = "ScrollToBottom" },
-  { key = "Up", mods = "Shift", action = "ScrollLineUp" },
-  { key = "Down", mods = "Shift", action = "ScrollLineDown" },
+  { key = "PageUp", mods = "Shift", action = "ScrollPageUp", mode = "~Alt" },
+  { key = "PageUp", mods = "Shift", action = "ScrollPageUp", mode = "Alt" },
+  { key = "PageDown", mods = "Shift", action = "ScrollPageDown", mode = "~Alt" },
+  { key = "PageDown", mods = "Shift", action = "ScrollPageDown", mode = "Alt" },
+  { key = "Up", mods = "Shift", action = "ScrollLineUp", mode = "~Alt" },
+  { key = "Up", mods = "Shift", action = "ScrollLineUp", mode = "Alt" },
+  { key = "Down", mods = "Shift", action = "ScrollLineDown", mode = "~Alt" },
+  { key = "Down", mods = "Shift", action = "ScrollLineDown", mode = "Alt" }
 ]
 
 [terminal]
